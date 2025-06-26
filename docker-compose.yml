@@ -2,10 +2,10 @@ services:
   # PostgreSQL Database
   postgres:
     image: postgres:15
-    container_name: ecommerce_db
+    container_name: finance_db
     environment:
       DB_HOST: postgres
-      POSTGRES_DB: ecommerce
+      POSTGRES_DB: finance
       POSTGRES_USER: dataeng
       POSTGRES_PASSWORD: secure123
     ports:
@@ -14,9 +14,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
     networks:
-      - ecommerce_network
+      - finance_network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U dataeng -d ecommerce"]
+      test: ["CMD-SHELL", "pg_isready -U dataeng -d finance"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -25,44 +25,43 @@ services:
   csv_processor:
     build:
       context: .
-      dockerfile: services/csv_data/csv_processor.Dockerfile
-    container_name: csv_processor_app
+      dockerfile: batch_processor/batch_csv.Dockerfile
+    container_name: csv_batch_processor_app
     depends_on:
       postgres:
         condition: service_healthy
     environment:
       DB_HOST: postgres
       DB_PORT: 5432
-      DB_NAME: ecommerce
+      DB_NAME: finance
       DB_USER: dataeng
       DB_PASSWORD: secure123
     volumes:
       - ./data:/app/data
       - ./output:/app/output
     networks:
-      - ecommerce_network
-    command: python csv_processor.py
-
-# API
-  api:
-    build:
-      context: .
-      dockerfile: services/api/api.Dockerfile
-    container_name: api_app
-    depends_on:
-      postgres:
-        condition: service_healthy
-    environment:
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_NAME: ecommerce
-      DB_USER: dataeng
-      DB_PASSWORD: secure123
-    ports:
-      - "8000:8000"
-    networks:
-      - ecommerce_network
-    command: uvicorn api:app --host 0.0.0.0 --port 8000
+      - finance_network
+    command: python processor.py
+## API
+#  api:
+#    build:
+#      context: .
+#      dockerfile: services/api/api.Dockerfile
+#    container_name: api_app
+#    depends_on:
+#      postgres:
+#        condition: service_healthy
+#    environment:
+#      DB_HOST: postgres
+#      DB_PORT: 5432
+#      DB_NAME: ecommerce
+#      DB_USER: dataeng
+#      DB_PASSWORD: secure123
+#    ports:
+#      - "8000:8000"
+#    networks:
+#      - ecommerce_network
+#    command: uvicorn api:app --host 0.0.0.0 --port 8000
 
 
 
@@ -72,5 +71,5 @@ volumes:
 
 # Custom network for container communication
 networks:
-  ecommerce_network:
+  finance_network:
     driver: bridge
