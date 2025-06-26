@@ -1,6 +1,7 @@
 from kafka import KafkaProducer
 import pandas as pd
 import json, random
+import time
 from datetime import datetime
 from fastapi import FastAPI
 
@@ -25,14 +26,10 @@ def generate_fake_transaction():
 
 
 # Send to Kafka
-fake_data = generate_fake_transaction()
-producer.send('transactions', fake_data.encode('utf-8'))
-
-
-
-@app.post("/transaction")
-async def create_transaction(transaction_data: dict):
-    producer.send('transactions', transaction_data)
+while True:
+    fake_data = generate_fake_transaction()
+    producer.send('transactions', fake_data.encode('utf-8'))
     producer.flush()
-    return {"status": "sent to kafka"}
+    time.sleep(2)  # Generate every 2 seconds
+    print(f"Sent: {fake_data}")
 
