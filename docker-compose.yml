@@ -2,7 +2,7 @@ services:
   # PostgreSQL Database
   postgres:
     image: postgres:15
-    container_name: finance_db
+    container_name:
     environment:
       DB_HOST: postgres
       POSTGRES_DB: finance
@@ -26,7 +26,6 @@ services:
     build:
       context: .
       dockerfile: batch_processor/batch_csv.Dockerfile
-    container_name: csv_processor_app
     depends_on:
       postgres:
         condition: service_healthy
@@ -42,7 +41,6 @@ services:
     build:
       context: .
       dockerfile: producer_streaming_api/producer.Dockerfile
-    container_name: producer_app
     depends_on:
       postgres:
         condition: service_healthy
@@ -57,7 +55,6 @@ services:
     build:
       context: .
       dockerfile: consumer_stream_api/consumer.Dockerfile
-    container_name: consumer_app
     depends_on:
       postgres:
         condition: service_healthy
