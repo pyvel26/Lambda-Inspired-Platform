@@ -31,10 +31,6 @@ services:
     depends_on:
       - postgres
 
-
-
-
-
   # CSV Processor Application
   csv_processor:
     build:
@@ -79,7 +75,7 @@ services:
       DB_USER: dataeng
       DB_PASSWORD: secure123
     ports:
-      - "8000:8000"
+      - "8001:8000"
     networks:
       - finance_network
     command: uvicorn consumer_api:app --host 0.0.0.0 --port 8000
