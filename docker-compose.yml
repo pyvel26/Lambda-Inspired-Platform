@@ -30,6 +30,8 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin123
     depends_on:
       - postgres
+    networks:
+      - finance_network
 
   # CSV Processor Application
   csv_processor:
