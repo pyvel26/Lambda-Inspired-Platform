@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - fraud_detection_postgres:/var/lib/postgresql/data
 
     networks:
       - finance_network
@@ -26,7 +26,38 @@ services:
     build:
       context: .
       dockerfile: batch_processor/batch_csv.Dockerfile
-    container_name: csv_batch_processor_app
+    container_name: csv_processor_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    networks:
+      - finance_network
+    command: python processor.py
+
+  ## API
+  producer_api:
+    build:
+      context: .
+      dockerfile: producer_streaming_api/producer.Dockerfile
+    container_name: producer_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    networks:
+      - finance_network
+    command: uvicorn producer_api:app --host 0.0.0.0 --port 8000
+
+  ## Consumer
+  consumer_api:
+    build:
+      context: .
+      dockerfile: consumer_stream_api/consumer.Dockerfile
+    container_name: consumer_app
     depends_on:
       postgres:
         condition: service_healthy
@@ -36,38 +67,16 @@ services:
       DB_NAME: finance
       DB_USER: dataeng
       DB_PASSWORD: secure123
-    volumes:
-      - ./data:/app/data
-      - ./output:/app/output
+    ports:
+      - "8000:8000"
     networks:
       - finance_network
-    command: python processor.py
-## API
-#  api:
-#    build:
-#      context: .
-#      dockerfile: services/api/api.Dockerfile
-#    container_name: api_app
-#    depends_on:
-#      postgres:
-#        condition: service_healthy
-#    environment:
-#      DB_HOST: postgres
-#      DB_PORT: 5432
-#      DB_NAME: ecommerce
-#      DB_USER: dataeng
-#      DB_PASSWORD: secure123
-#    ports:
-#      - "8000:8000"
-#    networks:
-#      - ecommerce_network
-#    command: uvicorn api:app --host 0.0.0.0 --port 8000
-
-
+    command: uvicorn consumer_api:app --host 0.0.0.0 --port 8000
 
 # Named volumes for data persistence
 volumes:
-  postgres_data:
+  fraud_detection_postgres:
+  fraud_detection_kafka:
 
 # Custom network for container communication
 networks:

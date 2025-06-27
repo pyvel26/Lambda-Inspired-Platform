@@ -6,6 +6,6 @@ COPY batch_processor/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY processor.py .
+COPY batch_processor/processor.py .
 
 CMD ["python", "processor.py"]
