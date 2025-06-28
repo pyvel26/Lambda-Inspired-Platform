@@ -6,6 +6,6 @@ COPY batch_processor/requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY batch_processor/processor.py .
+COPY . .
 
-CMD ["python", "processor.py"]
+CMD ["python", "batch_processor/processor.py"]

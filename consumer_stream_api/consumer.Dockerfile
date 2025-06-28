@@ -6,7 +6,7 @@ COPY consumer_stream_api/requirements.txt .
 
 RUN pip install -r requirements.txt
 
-COPY consumer_stream_api/consumer_api.py .
+COPY . .
 
-CMD ["uvicorn", "consumer_api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "consumer_stream_api/consumer_api.py"]
 

@@ -41,11 +41,22 @@ risk_score DECIMAL(3,2) NOT NULL
 """)
 
 for message in consumer:
-    transaction = message.value.decode('utf-8')
-    row = transaction.split(',')
+    data = message.value  # Already a dict
+    print(f"Received data: {data}")
+    print(f"Data type: {type(data)}")
     cur.execute("""
-    INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-    """, tuple(row))
+        INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """, (
+        data["transaction_id"],
+        data["account_id"],
+        data["transaction_type"],
+        data["amount"],
+        data["timestamp"],
+        data["merchant_category"],
+        data["location"],
+        data["card_present"],
+        data["risk_score"]
+    ))
 
 conn.commit()
 cur.close()
