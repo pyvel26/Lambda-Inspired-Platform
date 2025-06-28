@@ -6,7 +6,7 @@ from datetime import datetime
 from fastapi import FastAPI
 
 producer = KafkaProducer(
-bootstrap_servers=['localhost:9092'],
+bootstrap_servers=['kafka:9092'],
 value_serializer=lambda v: json.dumps(v).encode('utf-8')
 )
 
@@ -28,7 +28,7 @@ def generate_fake_transaction():
 # Send to Kafka
 while True:
     fake_data = generate_fake_transaction()
-    producer.send('transactions', fake_data.encode('utf-8'))
+    producer.send('transactions', fake_data)
     producer.flush()
     time.sleep(2)  # Generate every 2 seconds
     print(f"Sent: {fake_data}")
