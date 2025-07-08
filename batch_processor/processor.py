@@ -12,5 +12,6 @@ df = pd.read_csv("data/financial_transactions.csv")
 
 # Send each row as JSON
 for _, row in df.iterrows():
-    producer.send('transactions', row.to_dict())
+    row_dict = row.to_dict()
+    producer.send('transactions', row_dict)
 producer.flush()

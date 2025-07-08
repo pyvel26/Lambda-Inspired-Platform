@@ -17,13 +17,13 @@ def generate_fake_transaction():
     return {
         "transaction_id": f"TXN-LIVE-{random.randint(1000, 9999)}",
         "account_id": f"ACC-{random.randint(1000, 9999)}",
-        "type": random.choice(transaction_types),
+        "transaction_type": random.choice(transaction_types),
         "amount": round(random.uniform(10.00, 500.00), 2),
         "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        "category": random.choice(categories),
+        "merchant_category": random.choice(categories),
         "location": "Nashville TN",
-        "valid": True,
-        "fraud_probability": round(random.uniform(0.01, 0.9), 2)
+        "card_present": True,
+        "risk_score": round(random.uniform(0.01, 0.9), 2)
     }
 
 
@@ -32,5 +32,5 @@ while True:
     # Send structured JSON
     producer.send('transactions', generate_fake_transaction())
     producer.flush()
-    time.sleep(2)  # Generate every 2 seconds
+    #time.sleep(2)  # Generate every 2 seconds
 
