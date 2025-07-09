@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 .env
 .vscode/
+# Local binaries - do not track
+kubectl
+minikube-linux-amd64

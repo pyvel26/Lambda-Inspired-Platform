@@ -48,7 +48,7 @@ services:
       - ./output:/app/output
     networks:
       - finance_network
-    command: python batch_processor/processor.py
+    command: python processor.py
 
   ## API
   producer_api:
@@ -65,12 +65,12 @@ services:
     networks:
       - finance_network
     healthcheck:
-      test: [ "CMD-SHELL", "curl -f http://localhost:8000/health || exit 1" ]
+      test: "pgrep -f producer_api.py || exit 1"
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 30s
-    command: python producer_streaming_api/producer_api.py
+    command: python producer_api.py
 
   ## Consumer
   consumer_api:
@@ -94,12 +94,12 @@ services:
     networks:
       - finance_network
     healthcheck:
-      test: [ "CMD-SHELL", "pgrep -f consumer_stream_api/consumer_api.py || exit 1" ]
+      test: "pgrep -f consumer_api.py || exit 1"
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 30s
-    command: python consumer_stream_api/consumer_api.py
+    command: python consumer_api.py
 
   kafka:
     image: confluentinc/cp-kafka:latest

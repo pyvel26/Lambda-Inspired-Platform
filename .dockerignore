@@ -1,0 +1,10 @@
+# Ignore unnecessary files
+.git/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.log
+minikube-linux-amd64
+kubectl

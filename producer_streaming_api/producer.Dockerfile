@@ -5,10 +5,9 @@ WORKDIR /app
 COPY producer_streaming_api/requirements.txt .
 
 RUN pip install -r requirements.txt
-RUN apt-get update && apt_get \
+RUN apt-get update && apt-get \
+install -y procps
 
-install -y curl
-
-COPY . .
+COPY producer_streaming_api/producer_api.py .
 
 CMD ["python", "producer_streaming_api/producer_api.py"]
