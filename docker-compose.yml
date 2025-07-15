@@ -1,6 +1,7 @@
 services:
   # PostgreSQL Database
   postgres:
+    container_name: realtime-postgres-ctr
     image: postgres:15
     environment:
       DB_HOST: postgres
@@ -9,6 +10,8 @@ services:
       POSTGRES_PASSWORD: secure123
     ports:
       - "5432:5432"
+    mem_limit: 4g
+    cpus: 1.0
     volumes:
       - fraud_detection_postgres:/var/lib/postgresql/data
 
@@ -22,9 +25,12 @@ services:
 
   # Pgadmin
   pgadmin:
+    container_name: realtime-pgadmin-ctr
     image: dpage/pgadmin4
     ports:
       - "5050:80"
+    mem_limit: 512m
+    cpus: .25
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin123
@@ -35,6 +41,7 @@ services:
 
   # CSV Processor Application
   csv_processor:
+    container_name: realtime-csv-processor-ctr
     build:
       context: .
       dockerfile: batch_processor/batch_csv.Dockerfile
@@ -43,6 +50,8 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
+    mem_limit: 1g
+    cpus: 1.0
     volumes:
       - ./data:/app/data
       - ./output:/app/output
@@ -52,6 +61,7 @@ services:
 
   ## API
   producer_api:
+    container_name: realtime-producer-api-ctr
     build:
       context: .
       dockerfile: producer_streaming_api/producer.Dockerfile
@@ -60,8 +70,8 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
-    ports:
-      - "8000:8000"
+    mem_limit: 2g
+    cpus: 4.0
     networks:
       - finance_network
     healthcheck:
@@ -74,6 +84,7 @@ services:
 
   ## Consumer
   consumer_api:
+    container_name: realtime-consumer-api-ctr
     build:
       context: .
       dockerfile: consumer_stream_api/consumer.Dockerfile
@@ -89,8 +100,8 @@ services:
       DB_NAME: finance
       DB_USER: dataeng
       DB_PASSWORD: secure123
-    ports:
-      - "8001:8000"
+    mem_limit: 2g
+    cpus: 4.0
     networks:
       - finance_network
     healthcheck:
@@ -102,6 +113,7 @@ services:
     command: python consumer_api.py
 
   kafka:
+    container_name: realtime-kafka-ctr
     image: confluentinc/cp-kafka:latest
     environment:
       KAFKA_NODE_ID: 1
@@ -120,6 +132,8 @@ services:
       CLUSTER_ID: kafka-cluster-1
     ports:
       - "9092:9092"
+    mem_limit: 2g
+    cpus: 4.0
     volumes:
       - fraud_detection_kafka:/var/lib/kafka/data
     networks:
