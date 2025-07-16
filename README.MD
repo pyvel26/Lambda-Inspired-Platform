@@ -1,6 +1,5 @@
 # Real-time Data Platform
-
-A containerized data platform that demonstrates real-time streaming architecture using Kafka, combining batch historical processing with live transaction streams. Data flows through Kafka into PostgreSQL, where it can be monitored in real-time.
+This was built as my second docker project to demonstrate a lambda architecture using Kafka, combining batch historical processing with live transaction streams. Data flows through Kafka into PostgreSQL, where it can be monitored in real-time.
 
 ---
 
@@ -46,14 +45,14 @@ Each container in this setup is capped with CPU and memory limits to avoid overl
 #### Resource Allocation
 
 | Container              | CPU Limit | Memory Limit |
-| ---------------------- | --------- | ------------ |
-| kafka                  | 2.0       | 2g           |
-| producer-streaming-api | 3.0       | 2g           |
-| batch-processor        | 1.5       | 1g           |
-| consumer-streaming-api | 4.0       | 2.5g         |
-| postgres               | 1.5       | 2g           |
+| ---------------------- |-----------|--------------|
+| kafka                  | 4.0       | 2g           |
+| producer-streaming-api | 1.0       | 2g           |
+| batch-processor        | 1.0       | 1g           |
+| consumer-streaming-api | 4.0       | 2.0g         |
+| postgres               | 1.0       | 4g           |
 | pgadmin                | 0.25      | 512m         |
-| **Total**              | **12.25** | **≈10.5 GB** |
+| **Total**              | **11.25** | **≈10.5 GB** |
 
 ---
 
