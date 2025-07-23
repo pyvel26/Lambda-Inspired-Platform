@@ -86,7 +86,7 @@ services:
     container_name: realtime-consumer-api-ctr
     build:
       context: .
-      dockerfile: consumer_stream_api/consumer.Dockerfile
+      dockerfile: consumer_stream/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -104,12 +104,12 @@ services:
     networks:
       - finance_network
     healthcheck:
-      test: "pgrep -f consumer_api.py || exit 1"
+      test: "pgrep -f consumer.py || exit 1"
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 30s
-    command: python consumer_api.py
+    command: python consumer.py
 
   kafka:
     container_name: realtime-kafka-ctr
