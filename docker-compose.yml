@@ -44,7 +44,7 @@ services:
     container_name: realtime-csv-processor-ctr
     build:
       context: .
-      dockerfile: batch_processor/batch_csv.Dockerfile
+      dockerfile: docker/csv-batch/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
