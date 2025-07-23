@@ -8,3 +8,17 @@ __pycache__/
 # Local binaries - do not track
 kubectl
 minikube-linux-amd64
+
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.so
+
+# Testing
+.pytest_cache/
+.coverage
