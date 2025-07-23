@@ -1,0 +1,31 @@
+transaction_id,account_id,transaction_type,amount,timestamp,merchant_category,location,card_present,risk_score
+TXN-2025-001,ACC-4521,purchase,79.99,2025-06-15 14:23:45,grocery,Nashville TN,true,0.1
+TXN-2025-002,ACC-7892,purchase,24.99,2025-06-15 16:45:12,retail,Nashville TN,true,0.05
+TXN-2025-003,ACC-3345,purchase,299.99,2025-06-14 10:30:22,electronics,Nashville TN,true,0.15
+TXN-2025-004,ACC-4521,withdrawal,200.00,2025-06-14 12:15:33,atm,Nashville TN,true,0.02
+TXN-2025-005,ACC-6678,purchase,15.99,2025-06-13 08:45:17,coffee,Nashville TN,true,0.01
+TXN-2025-006,ACC-9901,purchase,89.99,2025-06-13 19:23:44,gas,Nashville TN,true,0.03
+TXN-2025-007,ACC-2234,purchase,19.99,2025-06-12 11:12:55,retail,Nashville TN,true,0.02
+TXN-2025-008,ACC-7892,purchase,79.99,2025-06-12 14:55:31,pharmacy,Nashville TN,true,0.04
+TXN-2025-009,ACC-5543,purchase,199.99,2025-06-11 16:30:45,furniture,Nashville TN,true,0.08
+TXN-2025-010,ACC-3345,purchase,59.99,2025-06-11 13:22:18,restaurant,Nashville TN,true,0.06
+TXN-2025-011,ACC-8876,purchase,149.99,2025-06-10 15:45:22,clothing,Nashville TN,true,0.07
+TXN-2025-012,ACC-4521,purchase,39.99,2025-06-10 09:18:47,grocery,Nashville TN,true,0.02
+TXN-2025-013,ACC-1098,purchase,59.99,2025-06-09 20:33:15,entertainment,Nashville TN,true,0.09
+TXN-2025-014,ACC-6678,purchase,12.99,2025-06-09 07:45:33,coffee,Nashville TN,true,0.01
+TXN-2025-015,ACC-7755,purchase,34.99,2025-06-08 18:22:44,retail,Nashville TN,true,0.03
+TXN-2025-016,ACC-2234,purchase,9.99,2025-06-08 12:15:22,convenience,Nashville TN,true,0.01
+TXN-2025-017,ACC-9988,purchase,45.99,2025-06-07 14:33:18,electronics,Nashville TN,true,0.05
+TXN-2025-018,ACC-4521,purchase,22.99,2025-06-07 16:45:55,grocery,Nashville TN,true,0.02
+TXN-2025-019,ACC-6677,purchase,1299.99,2025-06-06 02:15:33,electronics,Las Vegas NV,false,0.85
+TXN-2025-020,ACC-3345,purchase,34.99,2025-06-06 11:30:44,garden,Nashville TN,true,0.03
+TXN-2025-021,ACC-5544,purchase,29.99,2025-06-05 13:22:17,pharmacy,Nashville TN,true,0.02
+TXN-2025-022,ACC-7892,purchase,2499.99,2025-06-05 03:45:22,jewelry,Miami FL,false,0.92
+TXN-2025-023,ACC-8899,purchase,24.99,2025-06-04 10:18:33,health,Nashville TN,true,0.02
+TXN-2025-024,ACC-1122,purchase,15.99,2025-06-04 19:33:45,retail,Nashville TN,true,0.01
+TXN-2025-025,ACC-6678,purchase,18.99,2025-06-03 08:22:18,grocery,Nashville TN,true,0.01
+TXN-2025-026,ACC-9900,purchase,39.98,2025-06-03 15:45:33,home,Nashville TN,true,0.04
+TXN-2025-027,ACC-2233,purchase,14.99,2025-06-02 12:33:22,sports,Nashville TN,true,0.02
+TXN-2025-028,ACC-4521,purchase,39.99,2025-06-02 17:18:45,electronics,Nashville TN,true,0.04
+TXN-2025-029,ACC-7788,purchase,16.99,2025-06-01 09:45:18,pharmacy,Nashville TN,true,0.02
+TXN-2025-030,ACC-3345,purchase,24.99,2025-06-01 14:22:33,kitchen,Nashville TN,true,0.03
