@@ -63,7 +63,7 @@ services:
     container_name: realtime-producer-api-ctr
     build:
       context: .
-      dockerfile: producer_streaming_api/producer.Dockerfile
+      dockerfile: docker/producer_stream/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -74,12 +74,12 @@ services:
     networks:
       - finance_network
     healthcheck:
-      test: "pgrep -f producer_api.py || exit 1"
+      test: "pgrep -f producer.py || exit 1"
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 30s
-    command: python producer_api.py
+    command: python producer.py
 
   ## Consumer
   consumer_api:
