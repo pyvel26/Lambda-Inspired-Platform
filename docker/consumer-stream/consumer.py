@@ -1,8 +1,9 @@
 import pandas as pd
 import psycopg2
 import json
-import os
+from utils import get_db_connection
 from kafka import KafkaConsumer
+
 
 
 
@@ -12,26 +13,13 @@ consumer = KafkaConsumer(
     value_deserializer=lambda m: json.loads(m.decode('utf-8'))
 )
 
-
-
-
-host = os.getenv('DB_HOST')
-password = os.getenv('DB_PASSWORD')
-user = os.getenv('DB_USER')
-database = os.getenv('DB_NAME')
-port = os.getenv('DB_PORT')
-
-
-conn = psycopg2.connect(host=host,
-                        database=database,
-                        port=port,
-                        user=user,
-                        password=password)
+conn = get_db_connection()
 
 try:
     cur = conn.cursor()
     cur.execute("""
     CREATE TABLE IF NOT EXISTS transactions (
+    job_id VARCHAR(50) NOT NULL,
     transaction_id VARCHAR(50) PRIMARY KEY,
     account_id VARCHAR(50) NOT NULL,
     transaction_type VARCHAR(20) NOT NULL,
@@ -56,9 +44,10 @@ for message in consumer:
         cur = conn.cursor()
         data = message.value  # Already a dict
         cur.execute("""
-            INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (transaction_id) DO NOTHING
         """, (
+            data["job_id"],
             data["transaction_id"],
             data["account_id"],
             data["transaction_type"],
