@@ -69,6 +69,7 @@ services:
         condition: service_healthy
       kafka:
         condition: service_healthy
+      csv-batch:
     mem_limit: 2g
     cpus: 1.0
     networks:
