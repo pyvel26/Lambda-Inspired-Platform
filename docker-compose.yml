@@ -40,7 +40,7 @@ services:
       - finance_network
 
   # CSV Processor Application
-  csv_processor:
+  csv-batch:
     container_name: realtime-csv-processor-ctr
     build:
       context: .
@@ -58,6 +58,18 @@ services:
     networks:
       - finance_network
     command: python processor.py
+    profiles: ["batch"]
+
+  # Cron Job Runner
+  cron-runner:
+    build: ./cron-runner
+    container_name: cron-runner
+    depends_on:
+      - csv-batch
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    profiles: [ "batch" ]
+
 
   ## API
   producer_api:
@@ -73,6 +85,8 @@ services:
       csv-batch:
     mem_limit: 2g
     cpus: 1.0
+    volumes:
+      - ./logs:/app/logs
     networks:
       - finance_network
     healthcheck:

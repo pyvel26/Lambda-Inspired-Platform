@@ -4,7 +4,7 @@ from time import sleep
 from psycopg2 import OperationalError, IntegrityError
 from utils import get_db_connection, get_logger
 
-logger = get_logger("batch_job")
+logger = get_logger("csv_batch")
 
 
 def init_schema(conn):
@@ -14,7 +14,6 @@ def init_schema(conn):
             id SERIAL PRIMARY KEY,
             job_id TEXT UNIQUE NOT NULL,
             run_time TIMESTAMP NOT NULL DEFAULT NOW(),
-            ingestion_type TEXT NOT NULL DEFAULT 'batch',
             source TEXT NOT NULL DEFAULT 'batch',
             status TEXT DEFAULT 'pending'
         );
@@ -54,9 +53,9 @@ def generate_next_job_id(conn):
 def register_job(conn, job_id, status="pending"):
     cur = conn.cursor()
     cur.execute("""
-        INSERT INTO batch_jobs (job_id, ingestion_type, run_time, status)
-        VALUES (%s, %s, %s, %s)
-    """, (job_id, "batch", datetime.now(), status))
+        INSERT INTO batch_jobs (job_id, run_time, status)
+        VALUES (%s, %s, %s)
+    """, (job_id, datetime.now(), status))
     conn.commit()
     cur.close()
     logger.info(f"Registered job {job_id} with status '{status}'.")
@@ -78,7 +77,6 @@ def generate_batch_data(job_id, count=10000):
     for _ in range(count):
         records.append({
             "job_id": job_id,
-            "ingestion_type": "batch",
             "transaction_id": f"TXN-LIVE-{random.randint(1000, 9999)}",
             "account_id": f"ACC-{random.randint(1000, 9999)}",
             "transaction_type": random.choice(transaction_types),
@@ -87,7 +85,8 @@ def generate_batch_data(job_id, count=10000):
             "merchant_category": random.choice(categories),
             "location": "Nashville TN",
             "card_present": True,
-            "risk_score": round(random.uniform(0.01, 0.9), 2)
+            "risk_score": round(random.uniform(0.01, 0.9), 2),
+            "ingestion_type": "batch"
         })
 
     return records
@@ -101,16 +100,17 @@ def save_transactions(conn, records, job_id):
         try:
             cur.execute("""
                 INSERT INTO transactions (
-                    job_id, ingestion_type, transaction_id, account_id,
-                    transaction_type, amount, event_time, merchant_category,
-                    location, card_present, risk_score
+                    job_id, transaction_id, account_id, transaction_type,
+                    amount, event_time, merchant_category, location,
+                    card_present, risk_score, ingestion_type
                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 ON CONFLICT (transaction_id) DO NOTHING
             """, (
-                record["job_id"], record["ingestion_type"], record["transaction_id"],
-                record["account_id"], record["transaction_type"], record["amount"],
-                record["event_time"], record["merchant_category"], record["location"],
-                record["card_present"], record["risk_score"]
+                record["job_id"], record["transaction_id"], record["account_id"],
+                record["transaction_type"], record["amount"], record["event_time"],
+                record["merchant_category"], record["location"],
+                record["card_present"], record["risk_score"],
+                record["ingestion_type"]
             ))
         except IntegrityError:
             conn.rollback()
