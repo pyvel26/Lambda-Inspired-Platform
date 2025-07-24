@@ -54,6 +54,7 @@ services:
     cpus: 1.0
     volumes:
       - ./data:/app/data
+      - ./logs:/app/logs
     networks:
       - finance_network
     command: python processor.py

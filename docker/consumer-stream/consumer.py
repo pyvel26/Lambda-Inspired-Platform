@@ -16,7 +16,7 @@ consumer = KafkaConsumer(
 conn = get_db_connection()
 
 try:
-    cur = conn.cursor()
+    cur = conn
     cur.execute("""
     CREATE TABLE IF NOT EXISTS transactions (
     job_id VARCHAR(50) NOT NULL,
