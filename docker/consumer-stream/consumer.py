@@ -1,11 +1,7 @@
-import pandas as pd
 import psycopg2
 import json
 from utils import get_db_connection
 from kafka import KafkaConsumer
-
-
-
 
 consumer = KafkaConsumer(
     'transactions',
@@ -15,69 +11,37 @@ consumer = KafkaConsumer(
 
 conn = get_db_connection()
 
-try:
-    cur = conn
-    cur.execute("""
-    CREATE TABLE IF NOT EXISTS transactions (
-    job_id VARCHAR(50) NOT NULL,
-    transaction_id VARCHAR(50) PRIMARY KEY,
-    account_id VARCHAR(50) NOT NULL,
-    transaction_type VARCHAR(20) NOT NULL,
-    amount DECIMAL(10,2) NOT NULL,
-    timestamp TIMESTAMP NOT NULL,
-    merchant_category VARCHAR(50),
-    location VARCHAR(100),
-    card_present BOOLEAN NOT NULL,
-    risk_score DECIMAL(3,2) NOT NULL
-    )
-    """)
-    conn.commit()
-    cur = conn.cursor()
-except Exception as e:
-    print(f"The following error occurred: {e}")
-
-
-
 for message in consumer:
-    cur = None  # Initialize to avoid scope issues
     try:
         cur = conn.cursor()
-        data = message.value  # Already a dict
+        data = message.value
+
+        # Set default ingestion type for stream data
+        data["ingestion_type"] = data.get("ingestion_type", "STREAM")
+
         cur.execute("""
-            INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (transaction_id) DO NOTHING
         """, (
-            data["job_id"],
+            data.get("job_id"),  # Will be None for stream data
             data["transaction_id"],
             data["account_id"],
             data["transaction_type"],
             data["amount"],
-            data["timestamp"],
+            data["timestamp"],  # Fixed field name
             data["merchant_category"],
             data["location"],
             data["card_present"],
-            data["risk_score"]
+            data["risk_score"],
+            data["ingestion_type"]
         ))
 
         conn.commit()
-        print(f"✅ Inserted: {data['transaction_id']}")
+        print(f"Inserted: {data['transaction_id']}")
 
-    except psycopg2.errors.DataError as e:
-        print(f"📊 Data format error: {e}")
+    except Exception as e:
+        print(f"Error processing message: {e}")
         conn.rollback()
-
-    except psycopg2.OperationalError as e:
-        print(f"🔌 Database connection error: {e}")
-        conn.rollback()
-
-    except KeyError as e:
-        print(f"🔑 Missing field in message: {e}")
-        # No rollback needed - no DB operation happened
-
-    except json.JSONDecodeError as e:
-        print(f"📄 Invalid JSON in message: {e}")
-        # No rollback needed - no DB operation happened
-
     finally:
-        if cur:
+        if 'cur' in locals():
             cur.close()

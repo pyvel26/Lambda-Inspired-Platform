@@ -1,16 +1,26 @@
 #!/bin/bash
 
-# Define cron job content (note: no asterisk escape needed in shell script)
-echo "* * * * * root docker exec realtime-csv-processor-ctr python /app/processor.py >> /var/log/cron.log 2>&1" > /etc/cron.d/batch-job
+# Kill any existing cron processes
+pkill cron || true
 
-# Set permissions
+# Create log directory
+mkdir -p /var/log
+
+# Create cron job with correct syntax (5 fields + user + command)
+echo "*/2 * * * * root docker exec lambda-csv-batch-ctr python /app/processor.py >> /var/log/cron.log 2>&1" > /etc/cron.d/batch-job
+
+# Add empty line at end (required for cron.d files)
+echo "" >> /etc/cron.d/batch-job
+
+# Set correct permissions
 chmod 0644 /etc/cron.d/batch-job
 
-# Apply the cron job
-crontab /etc/cron.d/batch-job
-
-# Make sure log file exists
+# Ensure log file exists
 touch /var/log/cron.log
 
+# Install the cron job
+crontab /etc/cron.d/batch-job
+
 # Start cron in foreground
+echo "Starting cron daemon..."
 cron -f

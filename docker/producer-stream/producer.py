@@ -4,6 +4,8 @@ from datetime import datetime
 from kafka import KafkaProducer
 from utils import get_logger
 
+
+
 logger = get_logger("stream_producer")
 
 producer = KafkaProducer(
@@ -13,7 +15,7 @@ producer = KafkaProducer(
 
 
 def generate_transaction_id():
-    return f"TXN-LIVE-{datetime.now().strftime('%Y%m%d%H%M%S%f')}-{random.randint(1000, 9999)}"
+    return f"TXN-{datetime.now().strftime('%Y%m%d%H%M%S%f')}-{random.randint(1000, 9999)}"
 
 
 def generate_fake_transaction():
@@ -21,7 +23,7 @@ def generate_fake_transaction():
     categories = ['grocery', 'gas', 'restaurant', 'retail', 'electronics', 'pharmacy', 'coffee', 'entertainment']
 
     return {
-        "transaction_id": generate_transaction_id(),
+        "transaction_id": f"TXN-{random.randint(10000000, 99999999)}",
         "account_id": f"ACC-{random.randint(100000, 999999)}",
         "transaction_type": random.choice(transaction_types),
         "amount": round(random.uniform(10.00, 500.00), 2),
