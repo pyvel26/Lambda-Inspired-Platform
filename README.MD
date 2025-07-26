@@ -12,7 +12,7 @@ This platform demonstrates Lambda architecture using an 8-container system that 
 - **lambda-consumer-ctr**: Consumes Kafka streams and writes to PostgreSQL
 
 ### Scheduled Batch Processing:
-- **lambda-cron-runner-ctr**: Schedules batch jobs every 2 minutes
+- **lambda-cron-runner-ctr**: Schedules batch jobs nightly at midnight
 - **lambda-csv-batch-ctr**: Generates batch transaction data with job tracking
 
 ### Data Management:
@@ -27,7 +27,7 @@ This platform demonstrates Lambda architecture using an 8-container system that 
 Live Data → lambda-producer-ctr → Kafka → lambda-consumer-ctr → PostgreSQL
 
 ### Batch Path:
-CRON Schedule → lambda-cron-runner-ctr → lambda-csv-batch-ctr → PostgreSQL
+Nightly Schedule (midnight) → lambda-cron-runner-ctr → lambda-csv-batch-ctr → PostgreSQL
 
 ### Management:
 lambda-db-setup-ctr → PostgreSQL Schema
@@ -80,17 +80,21 @@ Each container in this setup is capped with CPU and memory limits to avoid overl
 git clone https://github.com/pyvel26/Lambda-Inspired-Platform
 cd Lambda-Inspired-Platform
 
+# Setup environment variables
+cp .env.example .env
+# Edit .env and fill in your database credentials
+
 # Start all services
-docker-compose up -d
+docker compose up -d
 
 # Check services are running
-docker-compose ps
+docker compose ps
 
 # Access pgAdmin to monitor data
 http://localhost:8080
 
 # (Optional) List Kafka topics
-docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
+docker compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 ```
 
 ---
@@ -106,11 +110,14 @@ docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 
 ```
 Lambda-Inspired-Platform/
-├── docker/                 # Container configurations
-├── src/                   # Source code for all services
 ├── data/                  # CSV files for batch processing
+├── docker/                # Container configurations  
+├── kubernetes/            # K8s deployment configs (next phase)
 ├── logs/                  # Application logs
+├── output/                # Processing outputs
 ├── docker-compose.yml     # 8-container orchestration
+├── main.py               # Main application entry
+├── utils.py              # Shared utilities
 └── README.md
 
 ---
