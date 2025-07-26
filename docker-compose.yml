@@ -39,7 +39,7 @@ services:
     networks:
       - finance_network
 
-  # docker-compose.yml
+# Database Preparation
   db-setup:
     container_name: lambda-db-setup-ctr
     build:
@@ -47,10 +47,13 @@ services:
       dockerfile: docker/db-setup/Dockerfile
     depends_on:
       - postgres
+    env_file: .env  # Make sure this line exists
     environment:
-      DB_HOST: lambda-postgres-ctr
-      # ... other DB vars
-    command: python /app/db_init.py
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+    command: python /app/db-init.py
     restart: "no"
     networks:
       - finance_network
@@ -70,11 +73,10 @@ services:
         condition: service_healthy
     env_file: .env  # Make sure this line exists
     environment:
-      DB_HOST: lambda-postgres-ctr
-      DB_PORT: 5432
-      DB_USER: dataeng
-      DB_PASSWORD: secure123
-      DB_NAME: finance
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
     mem_limit: 1g
     cpus: 1.0
     volumes:

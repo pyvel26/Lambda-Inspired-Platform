@@ -9,6 +9,6 @@ RUN pip install -r requirements.txt
 RUN apt-get update
 
 COPY utils.py .
-COPY docker/db-setup/db_init.py .
+COPY docker/db-setup/db-init.py .
 
-CMD ["python", "docker/db-setup/db_init.py "]
+CMD ["python", "docker/db-setup/db-init.py "]
