@@ -1,41 +1,42 @@
-# Real-time Data Platform
-This was built as my second docker project to demonstrate a lambda architecture using Kafka, combining batch historical processing with live transaction streams. Data flows through Kafka into PostgreSQL, where it can be monitored in real-time.
-
+# Lambda Data Platform
+This platform demonstrates Lambda architecture using an 8-container system that combines real-time streaming with scheduled batch processing. Stream data flows through Kafka while batch data is processed directly to PostgreSQL with job tracking and monitoring.
 ---
 
 ## Architecture
 
-**Producers (Data Sources):**
+## Platform Components (8 Containers)
 
-- **batch-processor**: Loads historical transaction data from CSV files and streams to Kafka
-- **producer-streaming-api**: Python-based service that generates fake live transactions and streams to Kafka
+### Real-time Stream Processing:
+- **lambda-producer-ctr**: Generates live transaction data and streams to Kafka
+- **kafka**: Message broker for real-time transaction streaming
+- **lambda-consumer-ctr**: Consumes Kafka streams and writes to PostgreSQL
 
-**Message Broker:**
+### Scheduled Batch Processing:
+- **lambda-cron-runner-ctr**: Schedules batch jobs every 2 minutes
+- **lambda-csv-batch-ctr**: Generates batch transaction data with job tracking
 
-- **kafka**: Central streaming platform that receives all transaction data
-
-**Consumer:**
-
-- **consumer-streaming-api**: Python-based service that consumes transaction data from Kafka and writes to PostgreSQL
-
-**Storage & Monitoring:**
-
-- **postgres**: Persistent storage for all transaction data
-- **pgadmin**: Web-based PostgreSQL interface for real-time monitoring
-
+### Data Management:
+- **lambda-postgres-ctr**: PostgreSQL database for transaction storage
+- **lambda-pgadmin-ctr**: Database management and monitoring interface
+- **lambda-db-setup-ctr**: Schema initialization (runs once, exits)
 ---
 
 ## Data Flow
 
-- CSV Data → `batch-processor` → Kafka
-- Fake Data → `producer-streaming-api` → Kafka
-- Kafka → `consumer-streaming-api` → PostgreSQL
+### Stream Path:
+Live Data → lambda-producer-ctr → Kafka → lambda-consumer-ctr → PostgreSQL
 
+### Batch Path:
+CRON Schedule → lambda-cron-runner-ctr → lambda-csv-batch-ctr → PostgreSQL
+
+### Management:
+lambda-db-setup-ctr → PostgreSQL Schema
+pgAdmin → PostgreSQL Monitoring
 ---
 
 ## 🛡 Infrastructure Layer Overview
 
-Host machine: **AMD Ryzen 7 5800H — 8 physical cores / 16 logical cores, 16 GB RAM**\
+My Host machine: **AMD Ryzen 7 5800H — 8 physical cores / 16 logical cores, 16 GB RAM**\
 Total project usage: **12.25 logical cores**, **≈10.5 GB RAM**
 
 Each container in this setup is capped with CPU and memory limits to avoid overloading the system during streaming and batch processing. These limits were configured to mimic real-world infrastructure behavior, even though this is a self-guided learning project.
@@ -43,25 +44,41 @@ Each container in this setup is capped with CPU and memory limits to avoid overl
 > This is an early project built while learning container orchestration and system resource management. The goal was to treat the environment like production from the start — even before gaining real-world experience.
 
 #### Resource Allocation
-
-| Container              | CPU Limit | Memory Limit |
-| ---------------------- |-----------|--------------|
-| kafka                  | 4.0       | 2g           |
-| producer-streaming-api | 1.0       | 2g           |
-| batch-processor        | 1.0       | 1g           |
-| consumer-streaming-api | 4.0       | 2.0g         |
-| postgres               | 1.0       | 4g           |
-| pgadmin                | 0.25      | 512m         |
-| **Total**              | **11.25** | **≈10.5 GB** |
-
+| Container | CPU Limit | Memory Limit | Purpose |
+|-----------|-----------|--------------|---------|
+| kafka | 4.0 | 2g | Message streaming |
+| lambda-producer-ctr | 1.0 | 2g | Stream data generation |
+| lambda-consumer-ctr | 4.0 | 2g | Stream processing |
+| lambda-csv-batch-ctr | 0.25 | 1g | Batch processing |
+| lambda-cron-runner-ctr | 0.25 | 1g | Job scheduling |
+| lambda-postgres-ctr | 1.0 | 4g | Database storage |
+| lambda-pgadmin-ctr | 0.25 | 512m | DB management |
+| lambda-db-setup-ctr | 0.25 | 512m | Schema setup |
+| **Total** | **~11 cores** | **~13 GB** | **8 containers** |
 ---
+
+
+## Key Features
+
+### Data Processing:
+- **Real-time streaming** with Kafka producer/consumer pattern
+- **Scheduled batch processing** with CRON job automation
+- **Job tracking** with status monitoring (pending → running → completed)
+- **Data lineage** with transaction ID preservation from source systems
+
+### Architecture:
+- **Lambda pattern** combining stream and batch processing
+- **Container orchestration** with Docker Compose
+- **Service networking** with isolated container communication
+- **Database schema management** with automated setup
+
 
 ## Quick Start
 
 ```bash
 # Clone and navigate to project
-git clone <your-repo>
-cd real-time-data_platform
+git clone https://github.com/pyvel26/Lambda-Inspired-Platform
+cd Lambda-Inspired-Platform
 
 # Start all services
 docker-compose up -d
@@ -80,24 +97,21 @@ docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 
 ## Services
 
-- Kafka: `localhost:9092`
-- PostgreSQL: `localhost:5432`
-- pgAdmin: `localhost:8080`
-- Producer API: `localhost:8001`
-- Consumer API: `localhost:8002`
-
+- pgAdmin: localhost:8080 (admin@admin.com / admin)
+- PostgreSQL: localhost:5432
+- Kafka: localhost:9092
 ---
 
 ## Project Structure
 
 ```
-real-time-data_platform/
-├── batch-processor/              # CSV to Kafka producer
-├── producer-streaming-api/       # Live data generator and Kafka producer  
-├── consumer-streaming-api/       # Kafka consumer and PostgreSQL writer
-├── data/                         # Transaction CSV files
-└── docker-compose.yml            # 6-container orchestration
-```
+Lambda-Inspired-Platform/
+├── docker/                 # Container configurations
+├── src/                   # Source code for all services
+├── data/                  # CSV files for batch processing
+├── logs/                  # Application logs
+├── docker-compose.yml     # 8-container orchestration
+└── README.md
 
 ---
 
@@ -128,3 +142,10 @@ Built to practice:
 
 Use pgAdmin to observe transaction data arriving in real-time, validating the full end-to-end data pipeline from producer to database.
 
+## Next Phase: Production Scale
+
+- **Kubernetes**: EKS deployment with Helm charts (*in progress*)
+- **CI/CD**: GitHub Actions pipeline with multi-environment staging  
+- **Monitoring**: Prometheus + Grafana observability stack
+
+*Kubernetes configs available in `/kubernetes` directory*
