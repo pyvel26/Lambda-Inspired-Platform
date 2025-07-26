@@ -7,7 +7,7 @@ pkill cron || true
 mkdir -p /var/log
 
 # Create cron job with correct syntax (5 fields + user + command)
-echo "*/2 * * * * root docker exec lambda-csv-batch-ctr python /app/processor.py >> /var/log/cron.log 2>&1" > /etc/cron.d/batch-job
+echo "0 0 * * * root docker exec lambda-csv-batch-ctr python /app/processor.py >> /var/log/cron.log 2>&1" > /etc/cron.d/batch-job
 
 # Add empty line at end (required for cron.d files)
 echo "" >> /etc/cron.d/batch-job
