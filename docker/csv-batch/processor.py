@@ -41,7 +41,7 @@ def generate_batch_data(job_id, count=10000):
     for _ in range(count):
         records.append({
             "job_id": job_id,
-            "transaction_id": f"TXN-{random.randint(1000, 9999)}",  # Shortened from TXN-LIVE-####
+            "transaction_id": f"TXN-{random.randint(1000, 9999)}",
             "account_id": f"ACC-{random.randint(1000, 9999)}",
             "transaction_type": random.choice(transaction_types),
             "amount": round(random.uniform(10.00, 500.00), 2),
@@ -122,7 +122,7 @@ def main():
                 update_job_status(cur, job_id, status="failed")
                 conn.commit()
             except:
-                pass  # Don't fail on failure logging
+                pass
 
     finally:
         if conn:
