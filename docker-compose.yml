@@ -46,13 +46,15 @@ services:
       context: .
       dockerfile: docker/db-setup/Dockerfile
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     env_file: .env  # Make sure this line exists
     environment:
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
     command: python /app/db-init.py
     restart: "no"
     networks:
@@ -65,10 +67,10 @@ services:
       context: .
       dockerfile: docker/csv-batch/Dockerfile
     depends_on:
-      db-setup:
-        condition: service_completed_successfully
       postgres:
         condition: service_healthy
+      db-setup:
+        condition: service_completed_successfully
       kafka:
         condition: service_healthy
     env_file: .env  # Make sure this line exists
@@ -77,6 +79,7 @@ services:
       DB_PORT: ${DB_PORT}
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
     mem_limit: 1g
     cpus: 1.0
     volumes:
@@ -110,10 +113,10 @@ services:
       context: .
       dockerfile: docker/producer-stream/Dockerfile
     depends_on:
-      db-setup:
-        condition: service_completed_successfully
       postgres:
         condition: service_healthy
+      db-setup:
+        condition: service_completed_successfully
       kafka:
         condition: service_healthy
     mem_limit: 3g
