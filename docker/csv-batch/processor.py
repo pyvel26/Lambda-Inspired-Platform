@@ -97,7 +97,7 @@ def main():
         cur = conn.cursor()
         logger.info("Connected to database.")
 
-        # Generate unique job ID for this batch run
+        # Generate unique job ID for this batch run and mark status as started
         job_id = generate_next_job_id(cur)
         register_job(cur, job_id, status="started")
         conn.commit()
@@ -119,6 +119,7 @@ def main():
         if conn and job_id:
             try:
                 cur = conn.cursor()
+                # pass a 'failed' status to function if an error is encountered
                 update_job_status(cur, job_id, status="failed")
                 conn.commit()
             except:
