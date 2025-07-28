@@ -1,5 +1,4 @@
 import json
-import psycopg2
 from kafka import KafkaConsumer
 from utils import get_db_connection
 
