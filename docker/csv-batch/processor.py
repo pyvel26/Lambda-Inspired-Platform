@@ -119,7 +119,7 @@ def main():
         if conn and job_id:
             try:
                 cur = conn.cursor()
-                # pass a 'failed' status to function if an error is encountered
+                # pass a 'failed' status if an error is encountered
                 update_job_status(cur, job_id, status="failed")
                 conn.commit()
             except:
