@@ -1,47 +1,71 @@
-import psycopg2
 import json
-from utils import get_db_connection
+import psycopg2
 from kafka import KafkaConsumer
+from utils import get_db_connection
 
-consumer = KafkaConsumer(
-    'transactions',
-    bootstrap_servers=['kafka:9092'],
-    value_deserializer=lambda m: json.loads(m.decode('utf-8'))
-)
 
-conn = get_db_connection()
+def create_consumer() -> KafkaConsumer:
+    """
+    Create and return a Kafka consumer configured to read JSON messages from the 'transactions' topic.
 
-for message in consumer:
-    try:
-        cur = conn.cursor()
-        data = message.value
+    Returns:
+        KafkaConsumer: Configured consumer instance.
+    """
+    return KafkaConsumer(
+        'transactions',
+        bootstrap_servers=['kafka:9092'],
+        value_deserializer=lambda m: json.loads(m.decode('utf-8'))
+    )
 
-        # Set default ingestion type for stream data
-        data["ingestion_type"] = data.get("ingestion_type", "STREAM")
 
-        cur.execute("""
-            INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (transaction_id) DO NOTHING
-        """, (
-            data.get("job_id"),  # Will be None for stream data
-            data["transaction_id"],
-            data["account_id"],
-            data["transaction_type"],
-            data["amount"],
-            data["timestamp"],  # Fixed field name
-            data["merchant_category"],
-            data["location"],
-            data["card_present"],
-            data["risk_score"],
-            data["ingestion_type"]
-        ))
+def process_message(cur, data: dict) -> None:
+    """
+    Insert a single transaction record into the 'transactions' table, skipping duplicates.
 
-        conn.commit()
-        print(f"Inserted: {data['transaction_id']}")
+    Args:
+        cur: Active database cursor.
+        data (dict): Deserialized transaction message.
+    """
+    data["ingestion_type"] = data.get("ingestion_type", "STREAM")
 
-    except Exception as e:
-        print(f"Error processing message: {e}")
-        conn.rollback()
-    finally:
-        if 'cur' in locals():
+    cur.execute("""
+        INSERT INTO transactions VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        ON CONFLICT (transaction_id) DO NOTHING
+    """, (
+        data.get("job_id"),
+        data["transaction_id"],
+        data["account_id"],
+        data["transaction_type"],
+        data["amount"],
+        data["timestamp"],
+        data["merchant_category"],
+        data["location"],
+        data["card_present"],
+        data["risk_score"],
+        data["ingestion_type"]
+    ))
+
+
+def main() -> None:
+    """
+    Consume transaction messages from Kafka and insert them into the PostgreSQL database.
+    Handles connection, deserialization, conflict avoidance, and rollback on error.
+    """
+    consumer = create_consumer()
+    conn = get_db_connection()
+
+    for message in consumer:
+        try:
+            cur = conn.cursor()
+            process_message(cur, message.value)
+            conn.commit()
+            print(f"Inserted: {message.value['transaction_id']}")
+        except Exception as e:
+            print(f"Error processing message: {e}")
+            conn.rollback()
+        finally:
             cur.close()
+
+
+if __name__ == "__main__":
+    main()
