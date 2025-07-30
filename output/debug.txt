@@ -1,2 +1,0 @@
-CSV columns: ['transaction_id', 'account_id', 'transaction_type', 'amount', 'timestamp', 'merchant_category', 'location', 'card_present', 'risk_score']
-First row: {'transaction_id': 'TXN-2025-001', 'account_id': 'ACC-4521', 'transaction_type': 'purchase', 'amount': 79.99, 'timestamp': '2025-06-15 14:23:45', 'merchant_category': 'grocery', 'location': 'Nashville TN', 'card_present': True, 'risk_score': 0.1}
