@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lambda-db-setup
+  labels:
+    app: lambda
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lambda
+  template:
+    metadata:
+      labels:
+        app: lambda
+    spec:
+      containers:
+        - name: 	lambda-db-setup-ctr
+          image: 	05261977/lambda-inspired-platform-db-setup:latest

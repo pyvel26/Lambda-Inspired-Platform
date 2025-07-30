@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lambda-postres
+  labels:
+    app: lambda
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lambda
+  template:
+    metadata:
+      labels:
+        app: lambda
+    spec:
+      containers:
+        - name: lambda-postgres-ctr
+          image: postgres:15
+          ports:
+          - containerPort: 5432

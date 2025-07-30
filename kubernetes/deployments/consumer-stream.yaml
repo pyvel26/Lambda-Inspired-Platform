@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lambda-consumer
+  labels:
+    app: lambda
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lambda
+  template:
+    metadata:
+      labels:
+        app: lambda
+    spec:
+      containers:
+        - name: lambda-consumer-ctr
+          image: 05261977/lambda-inspired-platform-consumer:latest

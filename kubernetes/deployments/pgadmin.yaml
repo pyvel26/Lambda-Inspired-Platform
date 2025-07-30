@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lambda-pgadmin
+  labels:
+    app: lambda
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: lambda
+  template:
+    metadata:
+      labels:
+        app: lambda
+    spec:
+      containers:
+        - name: lambda-pgdamin-ctr
+          image: dpage/pgadmin4
+          ports:
+          - containerPort: 8080
