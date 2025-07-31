@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: lambda-kafka
+  namespace: dev
   labels:
     app: lambda
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: lambda
@@ -15,7 +16,34 @@ spec:
         app: lambda
     spec:
       containers:
-        - name:	lambda-kafka-ctr
-          image:	confluentinc/cp-kafka:latest
+        - name: lambda-kafka-ctr
+          image: confluentinc/cp-kafka:latest
           ports:
-          - containerPort: 5050
+            - containerPort: 9092
+            - containerPort: 9093
+          env:
+            - name: CLUSTER_ID
+              value: kafka-cluster-1
+            - name: KAFKA_NODE_ID
+              value: "1"
+            - name: KAFKA_PROCESS_ROLES
+              value: "broker,controller"
+            - name: KAFKA_CONTROLLER_QUORUM_VOTERS
+              value: "1@localhost:9093"
+            - name: KAFKA_CONTROLLER_LISTENER_NAMES
+              value: "CONTROLLER"
+            - name: KAFKA_LISTENERS
+              value: "PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093"
+            - name: KAFKA_ADVERTISED_LISTENERS
+              value: "PLAINTEXT://kafka:9092"
+            - name: KAFKA_LOG_DIRS
+              value: "/tmp/kraft-combined-logs"
+          volumeMounts:
+            - name: kafka-config
+              mountPath: /kafka/config/server.properties
+              subPath: server.properties
+      volumes:
+        - name: kafka-config
+          hostPath:
+            path: /mnt/kafka-config
+            type: Directory

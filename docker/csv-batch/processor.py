@@ -33,7 +33,7 @@ def update_job_status(cur, job_id, status):
 
 
 def generate_batch_data(job_id, count=10000):
-    """Generate realistic transaction data for batch processing"""
+    """Generate realistic transaction batch-datasource for batch processing"""
     transaction_types = ['purchase', 'withdrawal', 'transfer', 'refund', 'deposit']
     categories = ['grocery', 'gas', 'restaurant', 'retail', 'electronics', 'pharmacy', 'coffee', 'entertainment']
     records = []
@@ -57,7 +57,7 @@ def generate_batch_data(job_id, count=10000):
 
 
 def save_transactions(cur, records):
-    """Insert transactions with individual error handling for data integrity"""
+    """Insert transactions with individual error handling for batch-datasource integrity"""
     failures = 0
 
     for record in records:
@@ -102,8 +102,8 @@ def main():
         register_job(cur, job_id, status="started")
         conn.commit()
 
-        # Generate and process batch data (10K records for nightly run)
-        logger.info(f"Generating batch data for job {job_id}")
+        # Generate and process batch batch-datasource (10K records for nightly run)
+        logger.info(f"Generating batch batch-datasource for job {job_id}")
         records = generate_batch_data(job_id)
 
         # Save transactions with individual error handling

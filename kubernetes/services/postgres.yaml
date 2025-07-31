@@ -1,7 +1,7 @@
     apiVersion: v1
     kind: Service
     metadata:
-      name: lambda-postres
+      name: dev
     spec:
       selector:
         app: lamda-postgres

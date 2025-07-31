@@ -32,7 +32,7 @@ def generate_fake_transaction() -> dict:
     Generate a fake financial transaction with randomized details.
 
     Returns:
-        dict: A dictionary containing simulated transaction data including ID, type, amount, timestamp, etc.
+        dict: A dictionary containing simulated transaction batch-datasource including ID, type, amount, timestamp, etc.
     """
     transaction_types = ['purchase', 'withdrawal', 'transfer', 'refund', 'deposit']
     categories = ['grocery', 'gas', 'restaurant', 'retail', 'electronics', 'pharmacy', 'coffee', 'entertainment']
@@ -52,9 +52,9 @@ def generate_fake_transaction() -> dict:
 
 def main() -> None:
     """
-    Continuously generate and send fake transaction data to a Kafka topic named 'transactions'.
+    Continuously generate and send fake transaction batch-datasource to a Kafka topic named 'transactions'.
 
-    Sends data every iteration until interrupted (e.g., Ctrl+C).
+    Sends batch-datasource every iteration until interrupted (e.g., Ctrl+C).
     Logs success and error events. Ensures the Kafka producer is properly closed on exit.
     """
     try:

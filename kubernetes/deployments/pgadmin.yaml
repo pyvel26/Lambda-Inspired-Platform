@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: lambda-pgadmin
+  namespace: dev
   labels:
     app: lambda
 spec:
@@ -17,5 +18,8 @@ spec:
       containers:
         - name: lambda-pgdamin-ctr
           image: dpage/pgadmin4
+          envFrom:
+            - secretRef:
+                name: database-config
           ports:
-          - containerPort: 8080
+          - containerPort: 5050

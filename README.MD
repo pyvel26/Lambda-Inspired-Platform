@@ -90,7 +90,7 @@ docker compose up -d
 # Check services are running
 docker compose ps
 
-# Access pgAdmin to monitor data
+# Access pgAdmin to monitor batch-datasource
 http://localhost:8080
 
 # (Optional) List Kafka topics
