@@ -11,4 +11,4 @@ RUN apt-get update
 COPY utils.py .
 COPY docker/db-setup/db-init.py .
 
-CMD ["python", "docker/db-setup/db-init.py "]
+CMD ["python", "db-init.py "]

@@ -18,6 +18,7 @@ spec:
       containers:
         - name: lambda-producer-ctr
           image: 05261977/lambda-inspired-platform-producer
+          command: [ "python", "producer.py"]
           envFrom:
             - secretRef:
                 name: database-config

@@ -18,6 +18,7 @@ spec:
       containers:
         - name: lambda-consumer-ctr
           image: 05261977/lambda-inspired-platform-consumer:latest
+          command: ["python", "/app/docker/consumer.py"]
           envFrom:
             - secretRef:
                 name: database-config

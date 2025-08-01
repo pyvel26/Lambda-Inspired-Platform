@@ -18,6 +18,7 @@ spec:
       containers:
         - name: lambda-csv-batch-ctr
           image: 05261977/lambda-inspired-platform-csv-batch:latest
+          command: ["sleep", "infinity"]
           envFrom:
             - secretRef:
                 name: database-config

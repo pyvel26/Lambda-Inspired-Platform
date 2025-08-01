@@ -11,5 +11,5 @@ install -y procps
 COPY utils.py .
 COPY docker/consumer-stream/consumer.py .
 
-CMD ["python", "docker/consumer-stream/consumer.py"]
+CMD ["python", "consumer.py"]
 

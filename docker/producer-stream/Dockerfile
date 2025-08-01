@@ -11,4 +11,4 @@ install -y procps
 COPY utils.py .
 COPY docker/producer-stream/producer.py .
 
-CMD ["python", "docker/producer-stream/producer.py"]
+CMD ["python", "producer.py"]
