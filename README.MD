@@ -112,7 +112,6 @@ docker compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 Lambda-Inspired-Platform/
 ├── data/                  # CSV files for batch processing
 ├── docker/                # Container configurations  
-├── kubernetes/            # K8s deployment configs (next phase)
 ├── logs/                  # Application logs
 ├── output/                # Processing outputs
 ├── docker-compose.yml     # 8-container orchestration
@@ -148,11 +147,3 @@ Built to practice:
 ## Monitoring
 
 Use pgAdmin to observe transaction data arriving in real-time, validating the full end-to-end data pipeline from producer to database.
-
-## Next Phase: Production Scale
-
-- **Kubernetes**: EKS deployment with Helm charts (*in progress*)
-- **CI/CD**: GitHub Actions pipeline with multi-environment staging  
-- **Monitoring**: Prometheus + Grafana observability stack
-
-*Kubernetes configs available in `/kubernetes` directory*
