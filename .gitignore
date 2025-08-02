@@ -20,3 +20,5 @@ dist/
 # Testing
 .pytest_cache/
 .coverage
+
+kubernetes/
