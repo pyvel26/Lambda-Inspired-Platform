@@ -22,7 +22,7 @@ def get_logger(name="default"):
     logger = logging.getLogger(name)
 
     if logger.handlers:
-        return logger  # prevent duplicate handlers
+        return logger
 
     logger.setLevel(logging.INFO)
 

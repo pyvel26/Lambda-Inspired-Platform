@@ -1,6 +1,10 @@
 import json
 from kafka import KafkaConsumer
-from utils import get_db_connection
+from utils import get_db_connection, get_logger
+
+
+
+logger = get_logger("consumer")
 
 
 def create_consumer() -> KafkaConsumer:
@@ -58,9 +62,9 @@ def main() -> None:
             cur = conn.cursor()
             process_message(cur, message.value)
             conn.commit()
-            print(f"Inserted: {message.value['transaction_id']}")
+            logger.info(f"Inserted: {message.value['transaction_id']}")
         except Exception as e:
-            print(f"Error processing message: {e}")
+            logger.info(f"Error processing message: {e}")
             conn.rollback()
         finally:
             cur.close()
