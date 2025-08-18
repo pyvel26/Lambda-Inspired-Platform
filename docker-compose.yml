@@ -39,12 +39,37 @@ services:
     networks:
       - finance_network
 
-# Database Preparation
+  airflow:
+    image: apache/airflow:2.9.3-python3.11
+    container_name: lambda-airflow-ctr
+    command: >
+      bash -c "
+        pip install -q 'apache-airflow-providers-docker>=3.12.0' &&
+        airflow standalone
+      "
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: "America/New_York"
+    env_file: .env                      # so Airflow sees DB_* vars too (optional but handy)
+    volumes:
+      - ./dags:/opt/airflow/dags        # <-- correct Airflow paths
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/csv_batch_nightly.sock:/var/run/csv_batch_nightly.sock   # <-- lets Airflow talk to Docker
+    user: "${AIRFLOW_UID:-50000}:0"
+    restart: unless-stopped
+    networks:
+      - finance_network                 # <-- same network as your stack
+
+
+  # Database Preparation
   db-setup:
     container_name: lambda-db-setup-ctr
     build:
       context: .
-      dockerfile: docker/db-setup/Dockerfile
+      dockerfile: csv_batch_nightly/db-setup/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -65,7 +90,7 @@ services:
     container_name: lambda-csv-batch-ctr
     build:
       context: .
-      dockerfile: docker/csv-batch/Dockerfile
+      dockerfile: csv_batch_nightly/csv-batch/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -87,7 +112,6 @@ services:
       - ./logs:/app/logs
     networks:
       - finance_network
-    command: sleep infinity
 
   # Cron Job Runner
   cron-runner:
@@ -96,11 +120,11 @@ services:
       .env
     build:
       context: .
-      dockerfile: docker/cron/Dockerfile
+      dockerfile: csv_batch_nightly/cron/Dockerfile
     mem_limit: 1g
     cpus: .25
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/csv_batch_nightly.sock:/var/run/csv_batch_nightly.sock
     networks:
       - finance_network
 
@@ -111,7 +135,7 @@ services:
     container_name: lambda-producer-ctr
     build:
       context: .
-      dockerfile: docker/producer-stream/Dockerfile
+      dockerfile: csv_batch_nightly/producer-stream/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -140,7 +164,7 @@ services:
     container_name: lambda-consumer-ctr
     build:
       context: .
-      dockerfile: docker/consumer-stream/Dockerfile
+      dockerfile: csv_batch_nightly/consumer-stream/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
