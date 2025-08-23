@@ -85,16 +85,16 @@ cp .env.example .env
 # Edit .env and fill in your database credentials
 
 # Start all services
-csv_batch_nightly compose up -d
+docker compose up -d
 
 # Check services are running
-csv_batch_nightly compose ps
+docker compose ps
 
 # Access pgAdmin to monitor batch-datasource
 http://localhost:8080
 
 # (Optional) List Kafka topics
-csv_batch_nightly compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
+docker compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 ```
 
 ---

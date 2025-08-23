@@ -4,7 +4,19 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.env
 *.log
 minikube-linux-amd64
 kubectl
+.env
+
+# Airflow runtime files - DO NOT COMMIT
+airflow-home/airflow.db
+airflow-home/airflow.cfg
+airflow-home/airflow-webserver.pid
+airflow-home/webserver_config.py
+airflow-home/logs/
+airflow-home/=*
+
+# All log directories
+logs/
+**/logs/

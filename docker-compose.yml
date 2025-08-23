@@ -7,18 +7,17 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_DB : ${POSTGRES_DB}
     ports:
       - "5432:5432"
     mem_limit: 2g
     cpus: 1.0
     volumes:
-      - fraud_detection_postgres:/var/lib/postgresql/batch-datasource
-
+      - fraud-detection-postgres:/var/lib/postgresql/batch-datasource
     networks:
-      - finance_network
+      - finance-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U dataeng -d finance"]
+      test: ["CMD-SHELL", "pg_isready -U dataeng"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -37,43 +36,48 @@ services:
     depends_on:
       - postgres
     networks:
-      - finance_network
+      - finance-network
 
   airflow:
     image: apache/airflow:2.9.3-python3.11
     container_name: lambda-airflow-ctr
-    command: >
-      bash -c "
-        pip install -q 'apache-airflow-providers-docker>=3.12.0' &&
-        airflow standalone
-      "
-    ports:
-      - "8080:8080"
+    env_file:
+      .env
+    user: "50000:984"
     environment:
+      AIRFLOW_HOME: /opt/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__CORE__DEFAULT_TIMEZONE: "America/New_York"
-    env_file: .env                      # so Airflow sees DB_* vars too (optional but handy)
+      AIRFLOW__CORE__FERNET_KEY: "TrpFV5M4TmpWi4UxLXH90Trv_LttJL8S-_TcTZGus7U="
+      AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
     volumes:
-      - ./dags:/opt/airflow/dags        # <-- correct Airflow paths
-      - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
-      - /var/run/csv_batch_nightly.sock:/var/run/csv_batch_nightly.sock   # <-- lets Airflow talk to Docker
-    user: "${AIRFLOW_UID:-50000}:0"
+      - ./airflow-home/dags:/opt/airflow/dags
+      - ./airflow-home/logs:/opt/airflow/logs
+      - ./airflow-home/config:/opt/airflow/config
+      - ./airflow-home/plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./entrypoint.sh:/entrypoint.sh
+    entrypoint: /bin/bash /entrypoint.sh
+    ports:
+      - "8080:8080"
     restart: unless-stopped
+    depends_on:
+        db-setup:
+          condition: service_completed_successfully
     networks:
-      - finance_network                 # <-- same network as your stack
-
+      - finance-network
 
   # Database Preparation
   db-setup:
     container_name: lambda-db-setup-ctr
     build:
       context: .
-      dockerfile: csv_batch_nightly/db-setup/Dockerfile
+      dockerfile: docker/db-setup/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
-    env_file: .env  # Make sure this line exists
+    env_file: .env
     environment:
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
@@ -83,14 +87,15 @@ services:
     command: python /app/db-init.py
     restart: "no"
     networks:
-      - finance_network
+      - finance-network
 
   # CSV Processor Application
   csv-batch:
     container_name: lambda-csv-batch-ctr
     build:
       context: .
-      dockerfile: csv_batch_nightly/csv-batch/Dockerfile
+      dockerfile: docker/csv-batch/Dockerfile
+    image: csv-batch:latest
     depends_on:
       postgres:
         condition: service_healthy
@@ -98,7 +103,7 @@ services:
         condition: service_completed_successfully
       kafka:
         condition: service_healthy
-    env_file: .env  # Make sure this line exists
+    env_file: .env
     environment:
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
@@ -109,24 +114,9 @@ services:
     cpus: 1.0
     volumes:
       - ./batch-datasource:/app/batch-datasource
-      - ./logs:/app/logs
+      - ./airflow-home/csv_logs:/app/airflow-logs
     networks:
-      - finance_network
-
-  # Cron Job Runner
-  cron-runner:
-    container_name: lambda-cron-runner-ctr
-    env_file:
-      .env
-    build:
-      context: .
-      dockerfile: csv_batch_nightly/cron/Dockerfile
-    mem_limit: 1g
-    cpus: .25
-    volumes:
-      - /var/run/csv_batch_nightly.sock:/var/run/csv_batch_nightly.sock
-    networks:
-      - finance_network
+      - finance-network
 
   # Producer API
   producer:
@@ -135,7 +125,7 @@ services:
     container_name: lambda-producer-ctr
     build:
       context: .
-      dockerfile: csv_batch_nightly/producer-stream/Dockerfile
+      dockerfile: docker/producer-stream/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -146,9 +136,9 @@ services:
     mem_limit: 3g
     cpus: 2.0
     volumes:
-      - ./logs:/app/logs
+      - ./airflow-home/producer_logs:/app/airflow-logs
     networks:
-      - finance_network
+      - finance-network
     healthcheck:
       test: "pgrep -f producer.py || exit 1"
       interval: 30s
@@ -164,7 +154,7 @@ services:
     container_name: lambda-consumer-ctr
     build:
       context: .
-      dockerfile: csv_batch_nightly/consumer-stream/Dockerfile
+      dockerfile: docker/consumer-stream/Dockerfile
     depends_on:
       postgres:
         condition: service_healthy
@@ -180,7 +170,7 @@ services:
     mem_limit: 2g
     cpus: 4.0
     networks:
-      - finance_network
+      - finance-network
     healthcheck:
       test: "pgrep -f consumer.py || exit 1"
       interval: 30s
@@ -212,10 +202,10 @@ services:
     mem_limit: 2g
     cpus: 4.0
     volumes:
-      - fraud_detection_kafka:/var/lib/kafka/batch-datasource
+      - fraud-detection-kafka:/var/lib/kafka/batch-datasource
       - /home/xxanonymousxx/kafka/config/server.properties:/kafka/config/server.properties
     networks:
-      - finance_network
+      - finance-network
     healthcheck:
       test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list" ]
       interval: 10s
@@ -226,10 +216,10 @@ services:
 
 # Named volumes for batch-datasource persistence
 volumes:
-  fraud_detection_postgres:
-  fraud_detection_kafka:
+  fraud-detection-postgres:
+  fraud-detection-kafka:
 
 # Custom network for container communication
 networks:
-  finance_network:
+  finance-network:
     driver: bridge

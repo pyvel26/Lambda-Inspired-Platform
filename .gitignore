@@ -1,12 +1,11 @@
 .idea/
 __pycache__/
 *.pyc
-.env
 .vscode/
 # Local binaries - do not track
 kubectl
 minikube-linux-amd64
-
+.env
 
 # Distribution / packaging
 build/
@@ -23,3 +22,15 @@ dist/
 
 kubernetes/
 
+# Airflow runtime files - DO NOT COMMIT
+airflow-home/airflow.db
+airflow-home/airflow.cfg
+airflow-home/airflow-webserver.pid
+airflow-home/webserver_config.py
+airflow-home/logs/
+airflow-home/=*
+
+# All log directories
+logs/
+**/logs/
+*.log
