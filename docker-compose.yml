@@ -45,6 +45,12 @@ services:
       .env
     user: "50000:984"
     environment:
+      AIRFLOW__SMTP__SMTP_HOST: smtp.protonmail.ch
+      AIRFLOW__SMTP__SMTP_PORT: 587
+      AIRFLOW__SMTP__SMTP_USER: ${PROTON_EMAIL}
+      AIRFLOW__SMTP__SMTP_PASSWORD: ${PROTON_SMTP_TOKEN}
+      AIRFLOW__SMTP__SMTP_MAIL_FROM: ${PROTON_EMAIL}
+      AIRFLOW__SMTP__SMTP_STARTTLS: "True"
       AIRFLOW_HOME: /opt/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__CORE__DEFAULT_TIMEZONE: "America/New_York"
@@ -61,8 +67,8 @@ services:
     entrypoint: /bin/bash /entrypoint.sh
     ports:
       - "8080:8080"
-    mem_limit:  512M
-    cpus: '0.1'
+    mem_limit:  2g
+    cpus: '1.0'
     restart: unless-stopped
     depends_on:
         db-setup:

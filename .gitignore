@@ -6,6 +6,8 @@ __pycache__/
 kubectl
 minikube-linux-amd64
 .env
+*.env
+.env.local
 
 # Distribution / packaging
 build/
