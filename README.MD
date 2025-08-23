@@ -12,7 +12,7 @@ This platform demonstrates Lambda architecture using an 8-container system that 
 - **lambda-consumer-ctr**: Consumes Kafka streams and writes to PostgreSQL
 
 ### Scheduled Batch Processing:
-- **lambda-cron-runner-ctr**: Schedules batch jobs nightly at midnight
+- **lambda-airflow-ctr**: Schedules batch jobs nightly at midnight
 - **lambda-csv-batch-ctr**: Generates batch transaction data with job tracking
 
 ### Data Management:
@@ -27,7 +27,7 @@ This platform demonstrates Lambda architecture using an 8-container system that 
 Live Data → lambda-producer-ctr → Kafka → lambda-consumer-ctr → PostgreSQL
 
 ### Batch Path:
-Nightly Schedule (midnight) → lambda-cron-runner-ctr → lambda-csv-batch-ctr → PostgreSQL
+Nightly Schedule (midnight) → lambda-airflow-ctr → lambda-csv-batch-ctr → PostgreSQL
 
 ### Management:
 lambda-db-setup-ctr → PostgreSQL Schema
@@ -50,7 +50,7 @@ Each container in this setup is capped with CPU and memory limits to avoid overl
 | lambda-producer-ctr | 1.0 | 2g | Stream data generation |
 | lambda-consumer-ctr | 4.0 | 2g | Stream processing |
 | lambda-csv-batch-ctr | 0.25 | 1g | Batch processing |
-| lambda-cron-runner-ctr | 0.25 | 1g | Job scheduling |
+| lambda-airflow-ctr | 0.25 | 1g | Job scheduling |
 | lambda-postgres-ctr | 1.0 | 4g | Database storage |
 | lambda-pgadmin-ctr | 0.25 | 512m | DB management |
 | lambda-db-setup-ctr | 0.25 | 512m | Schema setup |
@@ -62,7 +62,7 @@ Each container in this setup is capped with CPU and memory limits to avoid overl
 
 ### Data Processing:
 - **Real-time streaming** with Kafka producer/consumer pattern
-- **Scheduled batch processing** with CRON job automation
+- **Scheduled batch processing** with airflow workflow automation
 - **Job tracking** with status monitoring (pending → running → completed)
 - **Data lineage** with transaction ID preservation from source systems
 
@@ -128,6 +128,7 @@ Lambda-Inspired-Platform/
 - Python 3.11
 - PostgreSQL
 - pgAdmin
+- Airflow
 
 ---
 
