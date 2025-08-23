@@ -37,24 +37,24 @@ pgAdmin → PostgreSQL Monitoring
 ## 🛡 Infrastructure Layer Overview
 
 My Host machine: **AMD Ryzen 7 5800H — 8 physical cores / 16 logical cores, 16 GB RAM**\
-Total project usage: **12.25 logical cores**, **≈10.5 GB RAM**
+Total project usage: **11 logical cores**, **≈13 GB RAM**
 
 Each container in this setup is capped with CPU and memory limits to avoid overloading the system during streaming and batch processing. These limits were configured to mimic real-world infrastructure behavior, even though this is a self-guided learning project.
 
 > This is an early project built while learning container orchestration and system resource management. The goal was to treat the environment like production from the start — even before gaining real-world experience.
 
 #### Resource Allocation
-| Container | CPU Limit | Memory Limit | Purpose |
-|-----------|-----------|--------------|---------|
-| kafka | 4.0 | 2g | Message streaming |
-| lambda-producer-ctr | 1.0 | 2g | Stream data generation |
-| lambda-consumer-ctr | 4.0 | 2g | Stream processing |
-| lambda-csv-batch-ctr | 0.25 | 1g | Batch processing |
-| lambda-airflow-ctr | 0.25 | 1g | Job scheduling |
-| lambda-postgres-ctr | 1.0 | 4g | Database storage |
-| lambda-pgadmin-ctr | 0.25 | 512m | DB management |
-| lambda-db-setup-ctr | 0.25 | 512m | Schema setup |
-| **Total** | **~11 cores** | **~13 GB** | **8 containers** |
+| Container | CPU Limit | Memory Limit | Purpose                 |
+|-----------|-----------|--------------|-------------------------|
+| kafka | 4.0 | 2g | Message streaming       |
+| lambda-producer-ctr | 1.0 | 2g | Stream data generation  |
+| lambda-consumer-ctr | 4.0 | 2g | Stream processing       |
+| lambda-csv-batch-ctr | 0.25 | 1g | Batch processing        |
+| lambda-airflow-ctr | 0.25 | 1g | Trigger Batch Container |
+| lambda-postgres-ctr | 1.0 | 4g | Database storage        |
+| lambda-pgadmin-ctr | 0.25 | 512m | DB management           |
+| lambda-db-setup-ctr | 0.25 | 512m | Schema setup            |
+| **Total** | **~11 cores** | **~13 GB** | **8 containers**        |
 ---
 
 
@@ -144,7 +144,21 @@ Built to practice:
 - Microservice separation of concerns
 
 ---
+## Monitoring Commands
 
-## Monitoring
+# Check container resource usage
+docker stats
+
+# View streaming data
+docker logs lambda-consumer-ctr -f
+
+# Check batch job status
+docker logs lambda-airflow-ctr -f
 
 Use pgAdmin to observe transaction data arriving in real-time, validating the full end-to-end data pipeline from producer to database.
+
+
+## Common Issues
+- **Airflow "Permission denied"**: Run `sudo chown -R $USER:$USER airflow-home/`
+- **Kafka connection fails**: Wait 30-60 seconds for Kafka to fully start
+- **Docker socket errors**: Ensure user is in docker group
