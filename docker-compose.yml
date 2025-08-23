@@ -78,6 +78,7 @@ services:
     profiles:
       - donotstart
 
+
   # Database Preparation
   db-setup:
     container_name: lambda-db-setup-ctr
@@ -124,10 +125,10 @@ services:
   #  cpus: 1.0
   #  volumes:
   #    - ./batch-datasource:/app/batch-datasource
-   #   - ./logs:/app/logs
-    networks:
-      - finance-network
-    command: sleep infinity"
+  #   - ./logs:/app/logs
+  #  networks:
+  #    - finance-network
+  #  command: sleep infinity"
 
   # Cron Job Runner
   cron-runner:

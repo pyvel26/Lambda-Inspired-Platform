@@ -19,7 +19,8 @@ default_args = {
 
 with DAG(
     dag_id="csv_batch_nightly",
-    schedule="0 0 * * *",           # 12:00 AM nightly
+    schedule="*/2 * * * *",
+    #schedule="0 0 * * *",           # 12:00 AM nightly
     default_args=default_args,
     start_date=datetime(2025, 8, 1),
     catchup=False,
