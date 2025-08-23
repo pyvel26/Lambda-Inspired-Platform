@@ -31,6 +31,8 @@ with DAG(
         force_pull=False,
         docker_url="unix:///var/run/docker.sock",
         network_mode="lambda-inspired-platform_finance-network",
+        mem_limit="1g",
+        cpu_quota=25000,
         auto_remove=True,
         do_xcom_push=False,
         mount_tmp_dir=False,

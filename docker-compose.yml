@@ -54,7 +54,7 @@ services:
       AIRFLOW_HOME: /opt/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW__CORE__DEFAULT_TIMEZONE: "America/New_York"
-      AIRFLOW__CORE__FERNET_KEY: "TrpFV5M4TmpWi4UxLXH90Trv_LttJL8S-_TcTZGus7U="
+      AIRFLOW__CORE__FERNET_KEY: ${FERNET_KEY}
       AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
     volumes:
@@ -75,6 +75,8 @@ services:
           condition: service_completed_successfully
     networks:
       - finance-network
+    profiles:
+      - donotstart
 
   # Database Preparation
   db-setup:
@@ -98,31 +100,47 @@ services:
       - finance-network
 
   # CSV Processor Application
-  csv-batch:
-    container_name: lambda-csv-batch-ctr
+  #csv-batch:
+  #  container_name: lambda-csv-batch-ctr
+  #  build:
+  #    context: .
+  #    dockerfile: docker/csv-batch/Dockerfile
+  #  image: csv-batch:latest
+  #  depends_on:
+  #    postgres:
+  #      condition: service_healthy
+  #   db-setup:
+  #      condition: service_completed_successfully
+  #    kafka:
+  #      condition: service_healthy
+  #  env_file: .env
+  #  environment:
+  #    DB_HOST: ${DB_HOST}
+  #    DB_PORT: ${DB_PORT}
+  #    DB_NAME: ${DB_NAME}
+  #    DB_USER: ${DB_USER}
+  #    DB_PASSWORD: ${DB_PASSWORD}
+  #  mem_limit: 1g
+  #  cpus: 1.0
+  #  volumes:
+  #    - ./batch-datasource:/app/batch-datasource
+   #   - ./logs:/app/logs
+    networks:
+      - finance-network
+    command: sleep infinity"
+
+  # Cron Job Runner
+  cron-runner:
+    container_name: lambda-cron-runner-ctr
+    env_file:
+      .env
     build:
       context: .
-      dockerfile: docker/csv-batch/Dockerfile
-    image: csv-batch:latest
-    depends_on:
-      postgres:
-        condition: service_healthy
-      db-setup:
-        condition: service_completed_successfully
-      kafka:
-        condition: service_healthy
-    env_file: .env
-    environment:
-      DB_HOST: ${DB_HOST}
-      DB_PORT: ${DB_PORT}
-      DB_NAME: ${DB_NAME}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
+      dockerfile: docker/cron/Dockerfile
     mem_limit: 1g
-    cpus: 1.0
+    cpus: .25
     volumes:
-      - ./batch-datasource:/app/batch-datasource
-      - ./airflow-home/csv_logs:/app/airflow-logs
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - finance-network
 
