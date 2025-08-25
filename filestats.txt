@@ -1,0 +1,811 @@
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    0.00%     1006MiB / 2GiB      49.12%    5.22MB / 3.42MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   0.05%     18.5MiB / 3GiB      0.60%     168MB / 595MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.63%     31.7MiB / 2GiB      1.55%     107MB / 60.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.00%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      0.02%     1016MiB / 2GiB      49.61%    595MB / 241MB     0B / 414MB       110
+43badbc78ea0   lambda-postgres-ctr   0.00%     63.89MiB / 2GiB     3.12%     63.4MB / 37.3MB   0B / 1.28GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    0.00%     1006MiB / 2GiB      49.12%    5.22MB / 3.42MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   0.05%     18.5MiB / 3GiB      0.60%     168MB / 595MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.63%     31.7MiB / 2GiB      1.55%     107MB / 60.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.00%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      0.02%     1016MiB / 2GiB      49.61%    595MB / 241MB     0B / 414MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   0.00%     63.89MiB / 2GiB     3.12%     63.4MB / 37.3MB   0B / 1.28GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    0.00%     1006MiB / 2GiB      49.12%    5.22MB / 3.42MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   0.05%     18.5MiB / 3GiB      0.60%     168MB / 595MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.63%     31.7MiB / 2GiB      1.55%     107MB / 60.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.00%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      0.02%     1016MiB / 2GiB      49.61%    595MB / 241MB     0B / 414MB       110
+43badbc78ea0   lambda-postgres-ctr   0.00%     63.89MiB / 2GiB     3.12%     63.4MB / 37.3MB   0B / 1.28GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    0.00%     1006MiB / 2GiB      49.12%    5.22MB / 3.42MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   0.05%     18.5MiB / 3GiB      0.60%     168MB / 595MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.63%     31.7MiB / 2GiB      1.55%     107MB / 60.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.00%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      0.02%     1016MiB / 2GiB      49.61%    595MB / 241MB     0B / 414MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   0.00%     63.89MiB / 2GiB     3.12%     63.4MB / 37.3MB   0B / 1.28GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.23MB / 3.43MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.09%   18.25MiB / 3GiB     0.59%     168MB / 596MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.83%     31.45MiB / 2GiB     1.54%     108MB / 60.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.30%    1016MiB / 2GiB      49.61%    596MB / 241MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.21%     63.96MiB / 2GiB     3.12%     63.6MB / 37.5MB   0B / 1.28GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.23MB / 3.43MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.09%   18.25MiB / 3GiB     0.59%     168MB / 596MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.83%     31.45MiB / 2GiB     1.54%     108MB / 60.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.30%    1016MiB / 2GiB      49.61%    596MB / 241MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.21%     63.96MiB / 2GiB     3.12%     63.6MB / 37.5MB   0B / 1.28GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.23MB / 3.43MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.09%   18.25MiB / 3GiB     0.59%     168MB / 596MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.83%     31.45MiB / 2GiB     1.54%     108MB / 60.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.30%    1016MiB / 2GiB      49.61%    596MB / 241MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.21%     63.96MiB / 2GiB     3.12%     63.6MB / 37.5MB   0B / 1.28GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.23MB / 3.43MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.09%   18.25MiB / 3GiB     0.59%     168MB / 596MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.83%     31.45MiB / 2GiB     1.54%     108MB / 60.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.30%    1016MiB / 2GiB      49.61%    596MB / 241MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.21%     63.96MiB / 2GiB     3.12%     63.6MB / 37.5MB   0B / 1.28GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    0.99%     1006MiB / 2GiB      49.12%    5.24MB / 3.44MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.74%    18.73MiB / 3GiB     0.61%     168MB / 597MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.12%     31.45MiB / 2GiB     1.54%     108MB / 60.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.57%    1016MiB / 2GiB      49.62%    597MB / 242MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.47%     63.82MiB / 2GiB     3.12%     63.8MB / 37.6MB   0B / 1.28GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    0.99%     1006MiB / 2GiB      49.12%    5.24MB / 3.44MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.74%    18.73MiB / 3GiB     0.61%     168MB / 597MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.12%     31.45MiB / 2GiB     1.54%     108MB / 60.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.57%    1016MiB / 2GiB      49.62%    597MB / 242MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.47%     63.82MiB / 2GiB     3.12%     63.8MB / 37.6MB   0B / 1.28GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    0.99%     1006MiB / 2GiB      49.12%    5.24MB / 3.44MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.74%    18.73MiB / 3GiB     0.61%     168MB / 597MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.12%     31.45MiB / 2GiB     1.54%     108MB / 60.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.57%    1016MiB / 2GiB      49.62%    597MB / 242MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.47%     63.82MiB / 2GiB     3.12%     63.8MB / 37.6MB   0B / 1.28GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    0.99%     1006MiB / 2GiB      49.12%    5.24MB / 3.44MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.74%    18.73MiB / 3GiB     0.61%     168MB / 597MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.12%     31.45MiB / 2GiB     1.54%     108MB / 60.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.57%    1016MiB / 2GiB      49.62%    597MB / 242MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.47%     63.82MiB / 2GiB     3.12%     63.8MB / 37.6MB   0B / 1.28GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.25%     1006MiB / 2GiB      49.12%    5.25MB / 3.45MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.42%   18.15MiB / 3GiB     0.59%     169MB / 598MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.89%     31.45MiB / 2GiB     1.54%     108MB / 60.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.42%    1016MiB / 2GiB      49.61%    598MB / 242MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.73%     63.91MiB / 2GiB     3.12%     64MB / 37.7MB     0B / 1.29GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.25%     1006MiB / 2GiB      49.12%    5.25MB / 3.45MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.42%   18.15MiB / 3GiB     0.59%     169MB / 598MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.89%     31.45MiB / 2GiB     1.54%     108MB / 60.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.42%    1016MiB / 2GiB      49.61%    598MB / 242MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.73%     63.91MiB / 2GiB     3.12%     64MB / 37.7MB     0B / 1.29GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.25%     1006MiB / 2GiB      49.12%    5.25MB / 3.45MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.42%   18.15MiB / 3GiB     0.59%     169MB / 598MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.89%     31.45MiB / 2GiB     1.54%     108MB / 60.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.42%    1016MiB / 2GiB      49.61%    598MB / 242MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.73%     63.91MiB / 2GiB     3.12%     64MB / 37.7MB     0B / 1.29GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.25%     1006MiB / 2GiB      49.12%    5.25MB / 3.45MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.42%   18.15MiB / 3GiB     0.59%     169MB / 598MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.89%     31.45MiB / 2GiB     1.54%     108MB / 60.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.42%    1016MiB / 2GiB      49.61%    598MB / 242MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.73%     63.91MiB / 2GiB     3.12%     64MB / 37.7MB     0B / 1.29GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.38%     1006MiB / 2GiB      49.12%    5.25MB / 3.46MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.76%    18.5MiB / 3GiB      0.60%     169MB / 599MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.31%     31.45MiB / 2GiB     1.54%     108MB / 60.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      179.14%   1.074GiB / 2GiB     53.72%    599MB / 242MB     0B / 415MB       140
+43badbc78ea0   lambda-postgres-ctr   10.31%    63.98MiB / 2GiB     3.12%     64.2MB / 37.8MB   0B / 1.29GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.38%     1006MiB / 2GiB      49.12%    5.25MB / 3.46MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.76%    18.5MiB / 3GiB      0.60%     169MB / 599MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.31%     31.45MiB / 2GiB     1.54%     108MB / 60.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      179.14%   1.074GiB / 2GiB     53.72%    599MB / 242MB     0B / 415MB       140 [K
+43badbc78ea0   lambda-postgres-ctr   10.31%    63.98MiB / 2GiB     3.12%     64.2MB / 37.8MB   0B / 1.29GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.38%     1006MiB / 2GiB      49.12%    5.25MB / 3.46MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.76%    18.5MiB / 3GiB      0.60%     169MB / 599MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.31%     31.45MiB / 2GiB     1.54%     108MB / 60.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      179.14%   1.074GiB / 2GiB     53.72%    599MB / 242MB     0B / 415MB       140
+43badbc78ea0   lambda-postgres-ctr   10.31%    63.98MiB / 2GiB     3.12%     64.2MB / 37.8MB   0B / 1.29GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.38%     1006MiB / 2GiB      49.12%    5.25MB / 3.46MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.76%    18.5MiB / 3GiB      0.60%     169MB / 599MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.31%     31.45MiB / 2GiB     1.54%     108MB / 60.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      179.14%   1.074GiB / 2GiB     53.72%    599MB / 242MB     0B / 415MB       140 [K
+43badbc78ea0   lambda-postgres-ctr   10.31%    63.98MiB / 2GiB     3.12%     64.2MB / 37.8MB   0B / 1.29GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.26MB / 3.47MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.41%    18.25MiB / 3GiB     0.59%     169MB / 600MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.94%     31.45MiB / 2GiB     1.54%     108MB / 61.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      40.06%    1016MiB / 2GiB      49.61%    600MB / 242MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.37%     64.28MiB / 2GiB     3.14%     64.4MB / 38MB     0B / 1.3GB       11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.26MB / 3.47MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.41%    18.25MiB / 3GiB     0.59%     169MB / 600MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.94%     31.45MiB / 2GiB     1.54%     108MB / 61.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      40.06%    1016MiB / 2GiB      49.61%    600MB / 242MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.37%     64.28MiB / 2GiB     3.14%     64.4MB / 38MB     0B / 1.3GB       11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.26MB / 3.47MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.41%    18.25MiB / 3GiB     0.59%     169MB / 600MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.94%     31.45MiB / 2GiB     1.54%     108MB / 61.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      40.06%    1016MiB / 2GiB      49.61%    600MB / 242MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   9.37%     64.28MiB / 2GiB     3.14%     64.4MB / 38MB     0B / 1.3GB       11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.26MB / 3.47MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.41%    18.25MiB / 3GiB     0.59%     169MB / 600MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.94%     31.45MiB / 2GiB     1.54%     108MB / 61.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      40.06%    1016MiB / 2GiB      49.61%    600MB / 242MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.37%     64.28MiB / 2GiB     3.14%     64.4MB / 38MB     0B / 1.3GB       11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.27MB / 3.48MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.07%   18.19MiB / 3GiB     0.59%     169MB / 601MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.33%     31.45MiB / 2GiB     1.54%     108MB / 61.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      33.23%    1019MiB / 2GiB      49.75%    601MB / 243MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   13.49%    64.1MiB / 2GiB      3.13%     64.6MB / 38.1MB   0B / 1.3GB       11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.27MB / 3.48MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.07%   18.19MiB / 3GiB     0.59%     169MB / 601MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.33%     31.45MiB / 2GiB     1.54%     108MB / 61.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      33.23%    1019MiB / 2GiB      49.75%    601MB / 243MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   13.49%    64.1MiB / 2GiB      3.13%     64.6MB / 38.1MB   0B / 1.3GB       11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.27MB / 3.48MB   28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.07%   18.19MiB / 3GiB     0.59%     169MB / 601MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.33%     31.45MiB / 2GiB     1.54%     108MB / 61.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      33.23%    1019MiB / 2GiB      49.75%    601MB / 243MB     0B / 415MB       110
+43badbc78ea0   lambda-postgres-ctr   13.49%    64.1MiB / 2GiB      3.13%     64.6MB / 38.1MB   0B / 1.3GB       11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.27MB / 3.48MB   28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.07%   18.19MiB / 3GiB     0.59%     169MB / 601MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.33%     31.45MiB / 2GiB     1.54%     108MB / 61.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      33.23%    1019MiB / 2GiB      49.75%    601MB / 243MB     0B / 415MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   13.49%    64.1MiB / 2GiB      3.13%     64.6MB / 38.1MB   0B / 1.3GB       11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    3.54%     1006MiB / 2GiB      49.12%    5.3MB / 3.52MB    28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   98.33%    18.48MiB / 3GiB     0.60%     170MB / 602MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.17%     31.46MiB / 2GiB     1.54%     108MB / 61.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.30%    1015MiB / 2GiB      49.57%    602MB / 243MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   11.18%    64.48MiB / 2GiB     3.15%     64.9MB / 38.2MB   0B / 1.3GB       11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    3.54%     1006MiB / 2GiB      49.12%    5.3MB / 3.52MB    28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   98.33%    18.48MiB / 3GiB     0.60%     170MB / 602MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.17%     31.46MiB / 2GiB     1.54%     108MB / 61.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.30%    1015MiB / 2GiB      49.57%    602MB / 243MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   11.18%    64.48MiB / 2GiB     3.15%     64.9MB / 38.2MB   0B / 1.3GB       11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    3.54%     1006MiB / 2GiB      49.12%    5.3MB / 3.52MB    28.7kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   98.33%    18.48MiB / 3GiB     0.60%     170MB / 602MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.17%     31.46MiB / 2GiB     1.54%     108MB / 61.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.30%    1015MiB / 2GiB      49.57%    602MB / 243MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   11.18%    64.48MiB / 2GiB     3.15%     64.9MB / 38.2MB   0B / 1.3GB       11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    3.54%     1006MiB / 2GiB      49.12%    5.3MB / 3.52MB    28.7kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   98.33%    18.48MiB / 3GiB     0.60%     170MB / 602MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.17%     31.46MiB / 2GiB     1.54%     108MB / 61.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.30%    1015MiB / 2GiB      49.57%    602MB / 243MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   11.18%    64.48MiB / 2GiB     3.15%     64.9MB / 38.2MB   0B / 1.3GB       11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    5.82%     1006MiB / 2GiB      49.12%    5.32MB / 3.53MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.05%   18.25MiB / 3GiB     0.59%     170MB / 603MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   10.81%    31.59MiB / 2GiB     1.54%     108MB / 61.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.13%    1015MiB / 2GiB      49.57%    603MB / 243MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   10.81%    64.25MiB / 2GiB     3.14%     65.1MB / 38.4MB   0B / 1.31GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    5.82%     1006MiB / 2GiB      49.12%    5.32MB / 3.53MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.05%   18.25MiB / 3GiB     0.59%     170MB / 603MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   10.81%    31.59MiB / 2GiB     1.54%     108MB / 61.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.13%    1015MiB / 2GiB      49.57%    603MB / 243MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   10.81%    64.25MiB / 2GiB     3.14%     65.1MB / 38.4MB   0B / 1.31GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    5.82%     1006MiB / 2GiB      49.12%    5.32MB / 3.53MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.05%   18.25MiB / 3GiB     0.59%     170MB / 603MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   10.81%    31.59MiB / 2GiB     1.54%     108MB / 61.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.13%    1015MiB / 2GiB      49.57%    603MB / 243MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   10.81%    64.25MiB / 2GiB     3.14%     65.1MB / 38.4MB   0B / 1.31GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    5.82%     1006MiB / 2GiB      49.12%    5.32MB / 3.53MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.05%   18.25MiB / 3GiB     0.59%     170MB / 603MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   10.81%    31.59MiB / 2GiB     1.54%     108MB / 61.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.13%    1015MiB / 2GiB      49.57%    603MB / 243MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   10.81%    64.25MiB / 2GiB     3.14%     65.1MB / 38.4MB   0B / 1.31GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.10%     1006MiB / 2GiB      49.12%    5.32MB / 3.54MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   101.90%   18.5MiB / 3GiB      0.60%     170MB / 604MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.98%     31.46MiB / 2GiB     1.54%     108MB / 61.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      20.52%    1015MiB / 2GiB      49.56%    604MB / 244MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   9.46%     64.82MiB / 2GiB     3.16%     65.4MB / 38.5MB   0B / 1.31GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.10%     1006MiB / 2GiB      49.12%    5.32MB / 3.54MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   101.90%   18.5MiB / 3GiB      0.60%     170MB / 604MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.98%     31.46MiB / 2GiB     1.54%     108MB / 61.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      20.52%    1015MiB / 2GiB      49.56%    604MB / 244MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.46%     64.82MiB / 2GiB     3.16%     65.4MB / 38.5MB   0B / 1.31GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.10%     1006MiB / 2GiB      49.12%    5.32MB / 3.54MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   101.90%   18.5MiB / 3GiB      0.60%     170MB / 604MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.98%     31.46MiB / 2GiB     1.54%     108MB / 61.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      20.52%    1015MiB / 2GiB      49.56%    604MB / 244MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   9.46%     64.82MiB / 2GiB     3.16%     65.4MB / 38.5MB   0B / 1.31GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.10%     1006MiB / 2GiB      49.12%    5.32MB / 3.54MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   101.90%   18.5MiB / 3GiB      0.60%     170MB / 604MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.98%     31.46MiB / 2GiB     1.54%     108MB / 61.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      20.52%    1015MiB / 2GiB      49.56%    604MB / 244MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.46%     64.82MiB / 2GiB     3.16%     65.4MB / 38.5MB   0B / 1.31GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.33MB / 3.55MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.39%   18.28MiB / 3GiB     0.59%     170MB / 605MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.05%     31.51MiB / 2GiB     1.54%     112MB / 62.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.36%    1015MiB / 2GiB      49.56%    605MB / 247MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   9.17%     64.38MiB / 2GiB     3.14%     65.6MB / 38.6MB   0B / 1.32GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.33MB / 3.55MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.39%   18.28MiB / 3GiB     0.59%     170MB / 605MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.05%     31.51MiB / 2GiB     1.54%     112MB / 62.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.36%    1015MiB / 2GiB      49.56%    605MB / 247MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.17%     64.38MiB / 2GiB     3.14%     65.6MB / 38.6MB   0B / 1.32GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.33MB / 3.55MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.39%   18.28MiB / 3GiB     0.59%     170MB / 605MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.05%     31.51MiB / 2GiB     1.54%     112MB / 62.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.36%    1015MiB / 2GiB      49.56%    605MB / 247MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   9.17%     64.38MiB / 2GiB     3.14%     65.6MB / 38.6MB   0B / 1.32GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.02%     1006MiB / 2GiB      49.12%    5.33MB / 3.55MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.39%   18.28MiB / 3GiB     0.59%     170MB / 605MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.05%     31.51MiB / 2GiB     1.54%     112MB / 62.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.36%    1015MiB / 2GiB      49.56%    605MB / 247MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.17%     64.38MiB / 2GiB     3.14%     65.6MB / 38.6MB   0B / 1.32GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.34MB / 3.56MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.89%    18.25MiB / 3GiB     0.59%     171MB / 606MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.37%     31.45MiB / 2GiB     1.54%     112MB / 62.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.08%    1016MiB / 2GiB      49.59%    606MB / 247MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   9.03%     64.7MiB / 2GiB      3.16%     65.8MB / 38.7MB   0B / 1.32GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.34MB / 3.56MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.89%    18.25MiB / 3GiB     0.59%     171MB / 606MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.37%     31.45MiB / 2GiB     1.54%     112MB / 62.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.08%    1016MiB / 2GiB      49.59%    606MB / 247MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.03%     64.7MiB / 2GiB      3.16%     65.8MB / 38.7MB   0B / 1.32GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.34MB / 3.56MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.89%    18.25MiB / 3GiB     0.59%     171MB / 606MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.37%     31.45MiB / 2GiB     1.54%     112MB / 62.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.08%    1016MiB / 2GiB      49.59%    606MB / 247MB     0B / 427MB       110
+43badbc78ea0   lambda-postgres-ctr   9.03%     64.7MiB / 2GiB      3.16%     65.8MB / 38.7MB   0B / 1.32GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.34MB / 3.56MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.89%    18.25MiB / 3GiB     0.59%     171MB / 606MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.37%     31.45MiB / 2GiB     1.54%     112MB / 62.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.08%    1016MiB / 2GiB      49.59%    606MB / 247MB     0B / 427MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.03%     64.7MiB / 2GiB      3.16%     65.8MB / 38.7MB   0B / 1.32GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.35MB / 3.57MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.47%   18.5MiB / 3GiB      0.60%     171MB / 607MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.42%     31.45MiB / 2GiB     1.54%     112MB / 62.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      17.51%    1016MiB / 2GiB      49.59%    607MB / 248MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   8.05%     64.5MiB / 2GiB      3.15%     66MB / 38.9MB     0B / 1.32GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.35MB / 3.57MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.47%   18.5MiB / 3GiB      0.60%     171MB / 607MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.42%     31.45MiB / 2GiB     1.54%     112MB / 62.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      17.51%    1016MiB / 2GiB      49.59%    607MB / 248MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   8.05%     64.5MiB / 2GiB      3.15%     66MB / 38.9MB     0B / 1.32GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.35MB / 3.57MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.47%   18.5MiB / 3GiB      0.60%     171MB / 607MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.42%     31.45MiB / 2GiB     1.54%     112MB / 62.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      17.51%    1016MiB / 2GiB      49.59%    607MB / 248MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   8.05%     64.5MiB / 2GiB      3.15%     66MB / 38.9MB     0B / 1.32GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.35MB / 3.57MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.47%   18.5MiB / 3GiB      0.60%     171MB / 607MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.42%     31.45MiB / 2GiB     1.54%     112MB / 62.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      17.51%    1016MiB / 2GiB      49.59%    607MB / 248MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   8.05%     64.5MiB / 2GiB      3.15%     66MB / 38.9MB     0B / 1.32GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.29%     1006MiB / 2GiB      49.12%    5.36MB / 3.58MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.57%    18.25MiB / 3GiB     0.59%     171MB / 608MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   5.63%     31.45MiB / 2GiB     1.54%     112MB / 62.6MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      17.50%    1016MiB / 2GiB      49.60%    608MB / 248MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   5.16%     64.54MiB / 2GiB     3.15%     66.1MB / 38.9MB   0B / 1.33GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.29%     1006MiB / 2GiB      49.12%    5.36MB / 3.58MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.57%    18.25MiB / 3GiB     0.59%     171MB / 608MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   5.63%     31.45MiB / 2GiB     1.54%     112MB / 62.6MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      17.50%    1016MiB / 2GiB      49.60%    608MB / 248MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   5.16%     64.54MiB / 2GiB     3.15%     66.1MB / 38.9MB   0B / 1.33GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.29%     1006MiB / 2GiB      49.12%    5.36MB / 3.58MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.57%    18.25MiB / 3GiB     0.59%     171MB / 608MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   5.63%     31.45MiB / 2GiB     1.54%     112MB / 62.6MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      17.50%    1016MiB / 2GiB      49.60%    608MB / 248MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   5.16%     64.54MiB / 2GiB     3.15%     66.1MB / 38.9MB   0B / 1.33GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.29%     1006MiB / 2GiB      49.12%    5.36MB / 3.58MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.57%    18.25MiB / 3GiB     0.59%     171MB / 608MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   5.63%     31.45MiB / 2GiB     1.54%     112MB / 62.6MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      17.50%    1016MiB / 2GiB      49.60%    608MB / 248MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   5.16%     64.54MiB / 2GiB     3.15%     66.1MB / 38.9MB   0B / 1.33GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.36MB / 3.59MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.48%   18.27MiB / 3GiB     0.59%     172MB / 609MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.02%     31.45MiB / 2GiB     1.54%     112MB / 62.8MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      17.74%    1016MiB / 2GiB      49.59%    609MB / 248MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.43%     64.62MiB / 2GiB     3.16%     66.3MB / 39.1MB   0B / 1.33GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.36MB / 3.59MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.48%   18.27MiB / 3GiB     0.59%     172MB / 609MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.02%     31.45MiB / 2GiB     1.54%     112MB / 62.8MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      17.74%    1016MiB / 2GiB      49.59%    609MB / 248MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.43%     64.62MiB / 2GiB     3.16%     66.3MB / 39.1MB   0B / 1.33GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.36MB / 3.59MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.48%   18.27MiB / 3GiB     0.59%     172MB / 609MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.02%     31.45MiB / 2GiB     1.54%     112MB / 62.8MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      17.74%    1016MiB / 2GiB      49.59%    609MB / 248MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.43%     64.62MiB / 2GiB     3.16%     66.3MB / 39.1MB   0B / 1.33GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.36MB / 3.59MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.48%   18.27MiB / 3GiB     0.59%     172MB / 609MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.02%     31.45MiB / 2GiB     1.54%     112MB / 62.8MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      17.74%    1016MiB / 2GiB      49.59%    609MB / 248MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.43%     64.62MiB / 2GiB     3.16%     66.3MB / 39.1MB   0B / 1.33GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.37MB / 3.6MB    32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.27%    18.25MiB / 3GiB     0.59%     172MB / 610MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.74%     31.45MiB / 2GiB     1.54%     112MB / 63.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      157.16%   1.067GiB / 2GiB     53.36%    610MB / 248MB     0B / 433MB       136
+43badbc78ea0   lambda-postgres-ctr   10.50%    64.69MiB / 2GiB     3.16%     66.5MB / 39.2MB   0B / 1.33GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.37MB / 3.6MB    32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.27%    18.25MiB / 3GiB     0.59%     172MB / 610MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.74%     31.45MiB / 2GiB     1.54%     112MB / 63.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      157.16%   1.067GiB / 2GiB     53.36%    610MB / 248MB     0B / 433MB       136 [K
+43badbc78ea0   lambda-postgres-ctr   10.50%    64.69MiB / 2GiB     3.16%     66.5MB / 39.2MB   0B / 1.33GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.37MB / 3.6MB    32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.27%    18.25MiB / 3GiB     0.59%     172MB / 610MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.74%     31.45MiB / 2GiB     1.54%     112MB / 63.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      157.16%   1.067GiB / 2GiB     53.36%    610MB / 248MB     0B / 433MB       136
+43badbc78ea0   lambda-postgres-ctr   10.50%    64.69MiB / 2GiB     3.16%     66.5MB / 39.2MB   0B / 1.33GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.21%     1006MiB / 2GiB      49.12%    5.37MB / 3.6MB    32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.27%    18.25MiB / 3GiB     0.59%     172MB / 610MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.74%     31.45MiB / 2GiB     1.54%     112MB / 63.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      157.16%   1.067GiB / 2GiB     53.36%    610MB / 248MB     0B / 433MB       136 [K
+43badbc78ea0   lambda-postgres-ctr   10.50%    64.69MiB / 2GiB     3.16%     66.5MB / 39.2MB   0B / 1.33GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.38MB / 3.61MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.15%   18.25MiB / 3GiB     0.59%     172MB / 611MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   6.84%     31.45MiB / 2GiB     1.54%     112MB / 63.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      62.91%    1015MiB / 2GiB      49.58%    611MB / 249MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   14.33%    65.02MiB / 2GiB     3.17%     66.8MB / 39.3MB   0B / 1.34GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.38MB / 3.61MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.15%   18.25MiB / 3GiB     0.59%     172MB / 611MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   6.84%     31.45MiB / 2GiB     1.54%     112MB / 63.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      62.91%    1015MiB / 2GiB      49.58%    611MB / 249MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   14.33%    65.02MiB / 2GiB     3.17%     66.8MB / 39.3MB   0B / 1.34GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.38MB / 3.61MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.15%   18.25MiB / 3GiB     0.59%     172MB / 611MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   6.84%     31.45MiB / 2GiB     1.54%     112MB / 63.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      62.91%    1015MiB / 2GiB      49.58%    611MB / 249MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   14.33%    65.02MiB / 2GiB     3.17%     66.8MB / 39.3MB   0B / 1.34GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.03%     1006MiB / 2GiB      49.12%    5.38MB / 3.61MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.15%   18.25MiB / 3GiB     0.59%     172MB / 611MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   6.84%     31.45MiB / 2GiB     1.54%     112MB / 63.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      62.91%    1015MiB / 2GiB      49.58%    611MB / 249MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   14.33%    65.02MiB / 2GiB     3.17%     66.8MB / 39.3MB   0B / 1.34GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.08%     1006MiB / 2GiB      49.12%    5.39MB / 3.62MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.75%    18.5MiB / 3GiB      0.60%     172MB / 612MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.14%     31.45MiB / 2GiB     1.54%     113MB / 63.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.22%    1015MiB / 2GiB      49.57%    612MB / 249MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.04%     64.9MiB / 2GiB      3.17%     67MB / 39.4MB     0B / 1.34GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.08%     1006MiB / 2GiB      49.12%    5.39MB / 3.62MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.75%    18.5MiB / 3GiB      0.60%     172MB / 612MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.14%     31.45MiB / 2GiB     1.54%     113MB / 63.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.22%    1015MiB / 2GiB      49.57%    612MB / 249MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.04%     64.9MiB / 2GiB      3.17%     67MB / 39.4MB     0B / 1.34GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.08%     1006MiB / 2GiB      49.12%    5.39MB / 3.62MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.75%    18.5MiB / 3GiB      0.60%     172MB / 612MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.14%     31.45MiB / 2GiB     1.54%     113MB / 63.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.22%    1015MiB / 2GiB      49.57%    612MB / 249MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.04%     64.9MiB / 2GiB      3.17%     67MB / 39.4MB     0B / 1.34GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.08%     1006MiB / 2GiB      49.12%    5.39MB / 3.62MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.75%    18.5MiB / 3GiB      0.60%     172MB / 612MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.14%     31.45MiB / 2GiB     1.54%     113MB / 63.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.22%    1015MiB / 2GiB      49.57%    612MB / 249MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.04%     64.9MiB / 2GiB      3.17%     67MB / 39.4MB     0B / 1.34GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.34%     1006MiB / 2GiB      49.12%    5.4MB / 3.63MB    32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.21%   18.73MiB / 3GiB     0.61%     173MB / 613MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.10%     31.45MiB / 2GiB     1.54%     113MB / 63.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      24.32%    1016MiB / 2GiB      49.59%    613MB / 249MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   8.89%     64.92MiB / 2GiB     3.17%     67.2MB / 39.5MB   0B / 1.35GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.34%     1006MiB / 2GiB      49.12%    5.4MB / 3.63MB    32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.21%   18.73MiB / 3GiB     0.61%     173MB / 613MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.10%     31.45MiB / 2GiB     1.54%     113MB / 63.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      24.32%    1016MiB / 2GiB      49.59%    613MB / 249MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   8.89%     64.92MiB / 2GiB     3.17%     67.2MB / 39.5MB   0B / 1.35GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.34%     1006MiB / 2GiB      49.12%    5.4MB / 3.63MB    32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.21%   18.73MiB / 3GiB     0.61%     173MB / 613MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.10%     31.45MiB / 2GiB     1.54%     113MB / 63.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      24.32%    1016MiB / 2GiB      49.59%    613MB / 249MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   8.89%     64.92MiB / 2GiB     3.17%     67.2MB / 39.5MB   0B / 1.35GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.34%     1006MiB / 2GiB      49.12%    5.4MB / 3.63MB    32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.21%   18.73MiB / 3GiB     0.61%     173MB / 613MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.10%     31.45MiB / 2GiB     1.54%     113MB / 63.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.01%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      24.32%    1016MiB / 2GiB      49.59%    613MB / 249MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   8.89%     64.92MiB / 2GiB     3.17%     67.2MB / 39.5MB   0B / 1.35GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.16%     1006MiB / 2GiB      49.12%    5.41MB / 3.64MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.82%    18.38MiB / 3GiB     0.60%     173MB / 614MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.09%     31.45MiB / 2GiB     1.54%     113MB / 63.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.31%    1016MiB / 2GiB      49.59%    614MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.38%     65.02MiB / 2GiB     3.17%     67.4MB / 39.7MB   0B / 1.35GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.16%     1006MiB / 2GiB      49.12%    5.41MB / 3.64MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.82%    18.38MiB / 3GiB     0.60%     173MB / 614MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.09%     31.45MiB / 2GiB     1.54%     113MB / 63.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.31%    1016MiB / 2GiB      49.59%    614MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.38%     65.02MiB / 2GiB     3.17%     67.4MB / 39.7MB   0B / 1.35GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.16%     1006MiB / 2GiB      49.12%    5.41MB / 3.64MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.82%    18.38MiB / 3GiB     0.60%     173MB / 614MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.09%     31.45MiB / 2GiB     1.54%     113MB / 63.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.31%    1016MiB / 2GiB      49.59%    614MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.38%     65.02MiB / 2GiB     3.17%     67.4MB / 39.7MB   0B / 1.35GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.16%     1006MiB / 2GiB      49.12%    5.41MB / 3.64MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.82%    18.38MiB / 3GiB     0.60%     173MB / 614MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.09%     31.45MiB / 2GiB     1.54%     113MB / 63.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.31%    1016MiB / 2GiB      49.59%    614MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.38%     65.02MiB / 2GiB     3.17%     67.4MB / 39.7MB   0B / 1.35GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.41MB / 3.65MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.56%    18MiB / 3GiB        0.59%     173MB / 615MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.49%     31.45MiB / 2GiB     1.54%     113MB / 64.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.85%    1015MiB / 2GiB      49.57%    615MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.95%     65.12MiB / 2GiB     3.18%     67.6MB / 39.8MB   0B / 1.35GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.41MB / 3.65MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.56%    18MiB / 3GiB        0.59%     173MB / 615MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.49%     31.45MiB / 2GiB     1.54%     113MB / 64.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.85%    1015MiB / 2GiB      49.57%    615MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.95%     65.12MiB / 2GiB     3.18%     67.6MB / 39.8MB   0B / 1.35GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.41MB / 3.65MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.56%    18MiB / 3GiB        0.59%     173MB / 615MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.49%     31.45MiB / 2GiB     1.54%     113MB / 64.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.85%    1015MiB / 2GiB      49.57%    615MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.95%     65.12MiB / 2GiB     3.18%     67.6MB / 39.8MB   0B / 1.35GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.06%     1006MiB / 2GiB      49.12%    5.41MB / 3.65MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.56%    18MiB / 3GiB        0.59%     173MB / 615MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.49%     31.45MiB / 2GiB     1.54%     113MB / 64.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.85%    1015MiB / 2GiB      49.57%    615MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.95%     65.12MiB / 2GiB     3.18%     67.6MB / 39.8MB   0B / 1.35GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    0.96%     1006MiB / 2GiB      49.12%    5.42MB / 3.65MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.57%    18.23MiB / 3GiB     0.59%     174MB / 616MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.28%     31.45MiB / 2GiB     1.54%     113MB / 64.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.57%    616MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.87%     65.44MiB / 2GiB     3.20%     67.9MB / 39.9MB   0B / 1.36GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    0.96%     1006MiB / 2GiB      49.12%    5.42MB / 3.65MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.57%    18.23MiB / 3GiB     0.59%     174MB / 616MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.28%     31.45MiB / 2GiB     1.54%     113MB / 64.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.57%    616MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.87%     65.44MiB / 2GiB     3.20%     67.9MB / 39.9MB   0B / 1.36GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    0.96%     1006MiB / 2GiB      49.12%    5.42MB / 3.65MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.57%    18.23MiB / 3GiB     0.59%     174MB / 616MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.28%     31.45MiB / 2GiB     1.54%     113MB / 64.3MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.57%    616MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.87%     65.44MiB / 2GiB     3.20%     67.9MB / 39.9MB   0B / 1.36GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    0.96%     1006MiB / 2GiB      49.12%    5.42MB / 3.65MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.57%    18.23MiB / 3GiB     0.59%     174MB / 616MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.28%     31.45MiB / 2GiB     1.54%     113MB / 64.3MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.57%    616MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.87%     65.44MiB / 2GiB     3.20%     67.9MB / 39.9MB   0B / 1.36GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.22%     1006MiB / 2GiB      49.12%    5.43MB / 3.66MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.70%    18.5MiB / 3GiB      0.60%     174MB / 617MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.85%     31.45MiB / 2GiB     1.54%     113MB / 64.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.36%    1016MiB / 2GiB      49.62%    617MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.97%     65.29MiB / 2GiB     3.19%     68.1MB / 40.1MB   0B / 1.36GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.22%     1006MiB / 2GiB      49.12%    5.43MB / 3.66MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.70%    18.5MiB / 3GiB      0.60%     174MB / 617MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.85%     31.45MiB / 2GiB     1.54%     113MB / 64.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.36%    1016MiB / 2GiB      49.62%    617MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.97%     65.29MiB / 2GiB     3.19%     68.1MB / 40.1MB   0B / 1.36GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.22%     1006MiB / 2GiB      49.12%    5.43MB / 3.66MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.70%    18.5MiB / 3GiB      0.60%     174MB / 617MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.85%     31.45MiB / 2GiB     1.54%     113MB / 64.5MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.36%    1016MiB / 2GiB      49.62%    617MB / 250MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.97%     65.29MiB / 2GiB     3.19%     68.1MB / 40.1MB   0B / 1.36GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.22%     1006MiB / 2GiB      49.12%    5.43MB / 3.66MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.70%    18.5MiB / 3GiB      0.60%     174MB / 617MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.85%     31.45MiB / 2GiB     1.54%     113MB / 64.5MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.36%    1016MiB / 2GiB      49.62%    617MB / 250MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.97%     65.29MiB / 2GiB     3.19%     68.1MB / 40.1MB   0B / 1.36GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.98%     1006MiB / 2GiB      49.12%    5.45MB / 3.68MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.72%    18.5MiB / 3GiB      0.60%     174MB / 618MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.55%     31.45MiB / 2GiB     1.54%     113MB / 64.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.61%    1015MiB / 2GiB      49.58%    618MB / 251MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   29.03%    65.39MiB / 2GiB     3.19%     68.3MB / 40.2MB   0B / 1.37GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.98%     1006MiB / 2GiB      49.12%    5.45MB / 3.68MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.72%    18.5MiB / 3GiB      0.60%     174MB / 618MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.55%     31.45MiB / 2GiB     1.54%     113MB / 64.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.61%    1015MiB / 2GiB      49.58%    618MB / 251MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   29.03%    65.39MiB / 2GiB     3.19%     68.3MB / 40.2MB   0B / 1.37GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.98%     1006MiB / 2GiB      49.12%    5.45MB / 3.68MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.72%    18.5MiB / 3GiB      0.60%     174MB / 618MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.55%     31.45MiB / 2GiB     1.54%     113MB / 64.7MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.61%    1015MiB / 2GiB      49.58%    618MB / 251MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   29.03%    65.39MiB / 2GiB     3.19%     68.3MB / 40.2MB   0B / 1.37GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.98%     1006MiB / 2GiB      49.12%    5.45MB / 3.68MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.72%    18.5MiB / 3GiB      0.60%     174MB / 618MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.55%     31.45MiB / 2GiB     1.54%     113MB / 64.7MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.61%    1015MiB / 2GiB      49.58%    618MB / 251MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   29.03%    65.39MiB / 2GiB     3.19%     68.3MB / 40.2MB   0B / 1.37GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.45MB / 3.69MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.64%    18.74MiB / 3GiB     0.61%     174MB / 619MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.52%     31.46MiB / 2GiB     1.54%     113MB / 64.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.62%    1016MiB / 2GiB      49.60%    619MB / 251MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   8.95%     65.48MiB / 2GiB     3.20%     68.5MB / 40.3MB   0B / 1.37GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.45MB / 3.69MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.64%    18.74MiB / 3GiB     0.61%     174MB / 619MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.52%     31.46MiB / 2GiB     1.54%     113MB / 64.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.62%    1016MiB / 2GiB      49.60%    619MB / 251MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   8.95%     65.48MiB / 2GiB     3.20%     68.5MB / 40.3MB   0B / 1.37GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.45MB / 3.69MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.64%    18.74MiB / 3GiB     0.61%     174MB / 619MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.52%     31.46MiB / 2GiB     1.54%     113MB / 64.9MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.62%    1016MiB / 2GiB      49.60%    619MB / 251MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   8.95%     65.48MiB / 2GiB     3.20%     68.5MB / 40.3MB   0B / 1.37GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.04%     1006MiB / 2GiB      49.12%    5.45MB / 3.69MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.64%    18.74MiB / 3GiB     0.61%     174MB / 619MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.52%     31.46MiB / 2GiB     1.54%     113MB / 64.9MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.62%    1016MiB / 2GiB      49.60%    619MB / 251MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   8.95%     65.48MiB / 2GiB     3.20%     68.5MB / 40.3MB   0B / 1.37GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.00%     1006MiB / 2GiB      49.12%    5.46MB / 3.7MB    32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.10%   18.51MiB / 3GiB     0.60%     175MB / 620MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.97%     33.49MiB / 2GiB     1.64%     116MB / 65.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.58%    620MB / 253MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.37%     65.58MiB / 2GiB     3.20%     68.7MB / 40.4MB   0B / 1.38GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.00%     1006MiB / 2GiB      49.12%    5.46MB / 3.7MB    32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.10%   18.51MiB / 3GiB     0.60%     175MB / 620MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.97%     33.49MiB / 2GiB     1.64%     116MB / 65.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.58%    620MB / 253MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.37%     65.58MiB / 2GiB     3.20%     68.7MB / 40.4MB   0B / 1.38GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.00%     1006MiB / 2GiB      49.12%    5.46MB / 3.7MB    32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   100.10%   18.51MiB / 3GiB     0.60%     175MB / 620MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   8.97%     33.49MiB / 2GiB     1.64%     116MB / 65.1MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.58%    620MB / 253MB     0B / 433MB       110
+43badbc78ea0   lambda-postgres-ctr   9.37%     65.58MiB / 2GiB     3.20%     68.7MB / 40.4MB   0B / 1.38GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.00%     1006MiB / 2GiB      49.12%    5.46MB / 3.7MB    32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   100.10%   18.51MiB / 3GiB     0.60%     175MB / 620MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   8.97%     33.49MiB / 2GiB     1.64%     116MB / 65.1MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.02%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      18.14%    1015MiB / 2GiB      49.58%    620MB / 253MB     0B / 433MB       110 [K
+43badbc78ea0   lambda-postgres-ctr   9.37%     65.58MiB / 2GiB     3.20%     68.7MB / 40.4MB   0B / 1.38GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS
+94173211b7cb   lambda-airflow-ctr    1.11%     1006MiB / 2GiB      49.12%    5.47MB / 3.71MB   32.8kB / 163MB   12
+212c2c7cff67   lambda-producer-ctr   99.83%    18.25MiB / 3GiB     0.59%     175MB / 621MB     0B / 4.1kB       2
+859af3c4b226   lambda-consumer-ctr   9.52%     33.49MiB / 2GiB     1.64%     116MB / 65.4MB    0B / 4.1kB       1
+7216b3af0d65   lambda-pgadmin-ctr    0.05%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7
+53cf6113dc28   lambda-kafka-ctr      126.50%   1.058GiB / 2GiB     52.89%    621MB / 254MB     0B / 433MB       135
+43badbc78ea0   lambda-postgres-ctr   14.54%    65.66MiB / 2GiB     3.21%     68.9MB / 40.6MB   0B / 1.38GB      11
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O        PIDS [K
+94173211b7cb   lambda-airflow-ctr    1.11%     1006MiB / 2GiB      49.12%    5.47MB / 3.71MB   32.8kB / 163MB   12 [K
+212c2c7cff67   lambda-producer-ctr   99.83%    18.25MiB / 3GiB     0.59%     175MB / 621MB     0B / 4.1kB       2 [K
+859af3c4b226   lambda-consumer-ctr   9.52%     33.49MiB / 2GiB     1.64%     116MB / 65.4MB    0B / 4.1kB       1 [K
+7216b3af0d65   lambda-pgadmin-ctr    0.05%     215.1MiB / 512MiB   42.01%    20.2kB / 126B     0B / 13.9MB      7 [K
+53cf6113dc28   lambda-kafka-ctr      126.50%   1.058GiB / 2GiB     52.89%    621MB / 254MB     0B / 433MB       135 [K
+43badbc78ea0   lambda-postgres-ctr   14.54%    65.66MiB / 2GiB     3.21%     68.9MB / 40.6MB   0B / 1.38GB      11 [K
+ [K
+[J[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+94173211b7cb   lambda-airflow-ctr    --        -- / --             --        --        --          --
+212c2c7cff67   lambda-producer-ctr   --        -- / --             --        --        --          --
+859af3c4b226   lambda-consumer-ctr   --        -- / --             --        --        --          --
+7216b3af0d65   lambda-pgadmin-ctr    --        -- / --             --        --        --          --
+53cf6113dc28   lambda-kafka-ctr      --        -- / --             --        --        --          --
+43badbc78ea0   lambda-postgres-ctr   --        -- / --             --        --        --          --
+[HCONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS [K
+94173211b7cb   lambda-airflow-ctr    --        -- / --             --        --        --          -- [K
+212c2c7cff67   lambda-producer-ctr   --        -- / --             --        --        --          -- [K
+859af3c4b226   lambda-consumer-ctr   --        -- / --             --        --        --          -- [K
+7216b3af0d65   lambda-pgadmin-ctr    --        -- / --             --        --        --          -- [K
+53cf6113dc28   lambda-kafka-ctr      --        -- / --             --        --        --          -- [K
+43badbc78ea0   lambda-postgres-ctr   --        -- / --             --        --        --          -- [K
+ [K
+[J

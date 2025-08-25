@@ -9,10 +9,10 @@ default_args = {
     'owner': 'E.B.',
     'depends_on_past': False,
     'start_date': datetime(2025, 8, 1),
-    'email': ['info@pubmerge.com'],  # Who gets alerts
-    'email_on_failure': True,          # Email if task fails
-    'email_on_retry': False,           # Email on retries (usually annoying)
-    'email_on_success': False,         # Email on success (optional)
+    'email': ['info@pubmerge.com'],
+    'email_on_failure': True,
+    'email_on_retry': False,
+    'email_on_success': False,
     'retries': 3,
     'retry_delay': timedelta(minutes=5)
 }
@@ -33,8 +33,8 @@ with DAG(
         docker_url="unix:///var/run/docker.sock",
         network_mode="lambda-inspired-platform_finance-network",
         mem_limit="1g",
-        cpu_quota=25000,
-        auto_remove=True,
+        cpus=0.25,
+        auto_remove=False,
         do_xcom_push=False,
         mount_tmp_dir=False,
         environment={

@@ -75,8 +75,6 @@ services:
           condition: service_completed_successfully
     networks:
       - finance-network
-    profiles:
-      - donotstart
 
 
   # Database Preparation
@@ -129,21 +127,6 @@ services:
   #  networks:
   #    - finance-network
   #  command: sleep infinity"
-
-  # Cron Job Runner
-  cron-runner:
-    container_name: lambda-cron-runner-ctr
-    env_file:
-      .env
-    build:
-      context: .
-      dockerfile: docker/cron/Dockerfile
-    mem_limit: 1g
-    cpus: .25
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - finance-network
 
   # Producer API
   producer:
