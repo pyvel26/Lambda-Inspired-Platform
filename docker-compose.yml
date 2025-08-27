@@ -188,8 +188,8 @@ services:
       start_period: 30s
 
 volumes:
-  fraud-detection-postgres:
-  fraud-detection-kafka:
+  postgres-data:
+  kafka-broker-data:
 
 
 networks:
