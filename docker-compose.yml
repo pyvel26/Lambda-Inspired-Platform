@@ -1,6 +1,5 @@
 
 services:
-  # PostgreSQL Database
   postgres:
     container_name: lambda-postgres-ctr
     image: postgres:15
@@ -13,7 +12,7 @@ services:
     mem_limit: 2g
     cpus: 1.0
     volumes:
-      - fraud-detection-postgres:/var/lib/postgresql/batch-datasource
+      - postgres-data:/var/lib/postgresql/data
     networks:
       - finance-network
     healthcheck:
@@ -22,7 +21,6 @@ services:
       timeout: 5s
       retries: 5
 
-  # Pgadmin
   pgadmin:
     container_name: lambda-pgadmin-ctr
     image: dpage/pgadmin4
@@ -76,8 +74,6 @@ services:
     networks:
       - finance-network
 
-
-  # Database Preparation
   db-setup:
     container_name: lambda-db-setup-ctr
     build:
@@ -98,37 +94,6 @@ services:
     networks:
       - finance-network
 
-  # CSV Processor Application
-  #csv-batch:
-  #  container_name: lambda-csv-batch-ctr
-  #  build:
-  #    context: .
-  #    dockerfile: docker/csv-batch/Dockerfile
-  #  image: csv-batch:latest
-  #  depends_on:
-  #    postgres:
-  #      condition: service_healthy
-  #   db-setup:
-  #      condition: service_completed_successfully
-  #    kafka:
-  #      condition: service_healthy
-  #  env_file: .env
-  #  environment:
-  #    DB_HOST: ${DB_HOST}
-  #    DB_PORT: ${DB_PORT}
-  #    DB_NAME: ${DB_NAME}
-  #    DB_USER: ${DB_USER}
-  #    DB_PASSWORD: ${DB_PASSWORD}
-  #  mem_limit: 1g
-  #  cpus: 1.0
-  #  volumes:
-  #    - ./batch-datasource:/app/batch-datasource
-  #   - ./logs:/app/logs
-  #  networks:
-  #    - finance-network
-  #  command: sleep infinity"
-
-  # Producer API
   producer:
     env_file:
       .env
@@ -157,7 +122,6 @@ services:
       start_period: 30s
     command: python producer.py
 
-  ## Consumer
   consumer:
     env_file:
       .env
@@ -212,7 +176,7 @@ services:
     mem_limit: 2g
     cpus: 4.0
     volumes:
-      - fraud-detection-kafka:/var/lib/kafka/batch-datasource
+      - kafka-broker-data:/var/lib/kafka/data
       - /home/xxanonymousxx/kafka/config/server.properties:/kafka/config/server.properties
     networks:
       - finance-network
@@ -223,13 +187,11 @@ services:
       retries: 5
       start_period: 30s
 
-
-# Named volumes for batch-datasource persistence
 volumes:
   fraud-detection-postgres:
   fraud-detection-kafka:
 
-# Custom network for container communication
+
 networks:
   finance-network:
     driver: bridge
